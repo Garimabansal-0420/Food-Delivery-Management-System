@@ -1,0 +1,319 @@
+
+body{
+    font-family: 'Trebuchet MS',
+                 'Lucida Sans Unicode',
+                 'Lucida Grande',
+                 'Lucida Sans',
+                 Arial,
+                 sans-serif;
+    background-color: #FFF7ED; 
+}
+a{
+    text-decoration: none;
+    color:white
+}
+.container{
+    display:flex;
+    
+    width:60%;
+    margin:5% auto 0% auto;
+    border-radius: 30px;
+}
+.box1{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width:50%;
+    
+}
+.box2{
+    background-color: white;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius:30px;
+    width:50%;
+    
+}
+.box2 h1{
+    margin-top:50px;
+    text-align: center;
+    font-family:'Trebuchet MS',
+                 'Lucida Sans Unicode',
+                 'Lucida Grande',
+                 'Lucida Sans',
+                 Arial,
+                 sans-serif; 
+    margin-bottom:2px;
+    
+}
+span{
+    color:#ea580c;
+    
+}
+.box2 h3{
+    font-family: 'Trebuchet MS',
+                 'Lucida Sans Unicode',
+                 'Lucida Grande',
+                 'Lucida Sans',
+                 Arial,
+                 sans-serif; 
+    text-align: center;
+    margin-top: 2px;
+    font-size: 1.5em;
+}
+label{
+    text-align: center;
+    margin-left:40%;
+    font-size: 1.2em;
+    
+}
+input{
+    margin-left:15%;
+    width:300px;
+    height:40px;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom:20px;
+
+}
+button{
+     margin-left:15%;
+     width: 300px;
+     height:40px ;
+     background-color: #ea580c;
+     color:white;
+     font-family:'Trebuchet MS',
+                 'Lucida Sans Unicode',
+                 'Lucida Grande',
+                 'Lucida Sans',
+                 Arial,
+                 sans-serif;
+    border-color: #ea580c;  
+    border-radius:30px;
+    font-size:1.3em;
+    transition-property: box-shadow;
+    transition-duration:0.4s ;
+     
+}
+button:hover{
+    box-shadow: 2px 2px 4px #ea580c;
+}
+h5{
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+
+@media (max-width: 1100px) {
+
+    .container {
+        width: 75%;
+    }
+
+    .box2 h1 {
+        font-size: 1.8em;
+    }
+
+    .box2 h3 {
+        font-size: 1.3em;
+    }
+
+    label {
+        display: block;
+        margin-left: 0;
+    }
+
+    input {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    button {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+
+
+
+@media (max-width: 800px) {
+
+    .container {
+        width: 90%;
+        margin-top: 5%;
+    }
+
+    .box1,
+    .box2 {
+        width: 50%;
+    }
+
+    .box2 h1 {
+        font-size: 1.6em;
+    }
+
+    .box2 h3 {
+        font-size: 1.2em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input {
+        width: 85%;
+        margin-left: 7.5%;
+    }
+
+    button {
+        width: 85%;
+        margin-left: 7.5%;
+        font-size: 1.1em;
+    }
+
+    h5 {
+        font-size: 0.8em;
+    }
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 0;
+    }
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 25px;
+    }
+
+    .box1 {
+        width: 100%;
+        height: 220px;
+
+        object-fit: cover;
+
+        border-radius: 25px 25px 0 0;
+    }
+
+    .box2 {
+        width: 100%;
+
+        border-radius: 0 0 25px 25px;
+
+        padding-bottom: 25px;
+    }
+
+    .box2 h1 {
+        margin-top: 25px;
+        font-size: 1.6em;
+    }
+
+    .box2 h3 {
+        font-size: 1.15em;
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+
+        width: 85%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: left;
+
+        font-size: 1em;
+    }
+
+    input {
+        display: block;
+
+        width: 85%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        height: 38px;
+
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        display: block;
+
+        width: 85%;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        height: 42px;
+
+        font-size: 1.1em;
+    }
+
+    h5 {
+        font-size: 0.8em;
+        margin-top: 15px;
+    }
+}
+
+
+
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 10px 0;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .box1 {
+        height: 180px;
+    }
+
+    .box2 {
+        padding-bottom: 20px;
+    }
+
+    .box2 h1 {
+        font-size: 1.4em;
+    }
+
+    .box2 h3 {
+        font-size: 1em;
+    }
+
+    label {
+        width: 88%;
+        font-size: 0.95em;
+    }
+
+    input {
+        width: 88%;
+        height: 35px;
+    }
+
+    button {
+        width: 88%;
+        height: 40px;
+        font-size: 1em;
+    }
+
+    h5 {
+        font-size: 0.75em;
+    }
+}
