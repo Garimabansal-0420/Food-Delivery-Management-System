@@ -1,0 +1,766 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f1f1f;
+    background: #ffffff;
+    padding-bottom: 100px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    border-top: 8px solid #3d3029;
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    background: white;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.swiggy-logo {
+    width: 83px;
+    height: 83px;
+    border-radius: 23px;
+    background: #ff5a00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 45px;
+}
+
+.swiggy-logo span {
+    transform: rotate(45deg);
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 18px;
+}
+
+.location b {
+    border-bottom: 2px solid #222;
+    padding-bottom: 9px;
+}
+
+.arrow {
+    color: #ff4d00;
+    font-size: 11px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+.nav-icon {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.help-icon {
+    width: 31px;
+    height: 31px;
+    border: 2px solid #222;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.user-icon {
+    font-size: 34px;
+}
+
+.cart-icon {
+    font-size: 31px;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main-container {
+    width: 74%;
+    max-width: 1320px;
+    margin: auto;
+}
+
+
+/* =========================
+   BREADCRUMB
+========================= */
+
+.breadcrumb {
+    margin-top: 50px;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESTAURANT HEADER
+========================= */
+
+.restaurant-header {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.restaurant-info h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.restaurant-info h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.restaurant-info p {
+    color: #666;
+    font-size: 16px;
+}
+
+.rating-box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 135px;
+    height: 94px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating {
+    color: #159447;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 17px;
+}
+
+.rating-count {
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESTAURANT DETAILS
+========================= */
+
+.restaurant-details {
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    margin-top: 40px;
+    padding: 30px 0;
+    display: flex;
+    gap: 80px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.detail-icon {
+    width: 43px;
+    height: 43px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.detail b {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.detail span {
+    display: block;
+    color: #888;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESTAURANT PHOTO
+========================= */
+
+.restaurant-photo-section {
+    width: 100%;
+    height: 360px;
+    margin-top: 40px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.restaurant-photo-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   FOOD SECTION
+========================= */
+
+.food-section {
+    margin-top: 70px;
+}
+
+.section-heading {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 16px;
+}
+
+
+/* =========================
+   FOOD CARD
+========================= */
+
+.food-card {
+    min-height: 235px;
+    padding: 35px 0;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.food-content {
+    max-width: 70%;
+}
+
+.veg-icon,
+.nonveg-icon {
+    width: 17px;
+    height: 17px;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 13px;
+}
+
+.veg-icon {
+    border-color: #159447;
+}
+
+.veg-icon::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #159447;
+}
+
+.nonveg-icon {
+    border-color: #c62828;
+}
+
+.nonveg-icon::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #c62828;
+}
+
+.food-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.food-content h4 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.food-rating {
+    color: #159447;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.food-rating span {
+    color: #888;
+    font-weight: normal;
+}
+
+.food-content p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+
+/* =========================
+   FOOD IMAGE
+========================= */
+
+.food-image-box {
+    width: 220px;
+    height: 190px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.food-image-box img {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+}
+
+.add-button {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 42px;
+    background: white;
+    color: #159447;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.add-button:hover {
+    background: #159447;
+    color: white;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    margin-top: 70px;
+    padding: 35px 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.about-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about-section > p {
+    max-width: 850px;
+    color: #666;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.about-details {
+    display: flex;
+    gap: 100px;
+    margin-top: 35px;
+}
+
+.about-details strong {
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.about-details p {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews-section {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.review-card {
+    padding: 25px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.review-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.profile-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.review-user b {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.review-user span {
+    display: block;
+    color: #888;
+    font-size: 12px;
+}
+
+.review-rating {
+    color: #159447;
+    font-weight: bold;
+}
+
+.review-card > p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CART BAR
+========================= */
+
+.cart-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 78px;
+    background: white;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8.7%;
+    z-index: 100;
+}
+
+.cart-message h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.cart-message p {
+    color: #888;
+    font-size: 13px;
+}
+
+.view-cart {
+    width: 155px;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background: #ff5a00;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.view-cart:hover {
+    background: #e94e00;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .main-container {
+        width: 86%;
+    }
+
+    .nav-right {
+        gap: 20px;
+    }
+
+    .nav-item {
+        font-size: 14px;
+    }
+
+    .restaurant-info h1 {
+        font-size: 40px;
+    }
+
+    .restaurant-details {
+        gap: 45px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 90px;
+        padding: 0 20px;
+    }
+
+    .swiggy-logo {
+        width: 58px;
+        height: 58px;
+        border-radius: 16px;
+        font-size: 30px;
+    }
+
+    .nav-left {
+        gap: 15px;
+    }
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .nav-item b {
+        display: none;
+    }
+
+    .nav-icon,
+    .user-icon,
+    .cart-icon {
+        font-size: 25px;
+    }
+
+    .help-icon {
+        width: 27px;
+        height: 27px;
+    }
+
+    .main-container {
+        width: 90%;
+    }
+
+    .restaurant-header {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .restaurant-info h1 {
+        font-size: 34px;
+    }
+
+    .rating-box {
+        width: 120px;
+    }
+
+    .restaurant-details {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .restaurant-photo-section {
+        height: 260px;
+    }
+
+    .food-content {
+        max-width: 55%;
+    }
+
+    .food-image-box {
+        width: 180px;
+    }
+
+    .about-details {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 15px;
+    }
+
+    .location {
+        font-size: 15px;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .nav-right .nav-item:nth-child(1),
+    .nav-right .nav-item:nth-child(2) {
+        display: none;
+    }
+
+    .main-container {
+        width: 92%;
+    }
+
+    .breadcrumb {
+        margin-top: 30px;
+        font-size: 12px;
+    }
+
+    .restaurant-info h1 {
+        font-size: 29px;
+    }
+
+    .restaurant-info h3 {
+        font-size: 16px;
+    }
+
+    .restaurant-info p {
+        font-size: 14px;
+    }
+
+    .restaurant-photo-section {
+        height: 210px;
+        border-radius: 12px;
+    }
+
+    .food-card {
+        gap: 15px;
+        padding: 25px 0;
+    }
+
+    .food-content {
+        max-width: calc(100% - 135px);
+    }
+
+    .food-content h3 {
+        font-size: 16px;
+    }
+
+    .food-content p {
+        font-size: 12px;
+    }
+
+    .food-image-box {
+        width: 130px;
+        height: 140px;
+    }
+
+    .food-image-box img {
+        height: 110px;
+    }
+
+    .add-button {
+        width: 85px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .about-section h2 {
+        font-size: 25px;
+    }
+
+    .cart-bar {
+        padding: 0 15px;
+    }
+
+    .cart-message h3 {
+        font-size: 15px;
+    }
+
+    .cart-message p {
+        font-size: 11px;
+    }
+
+    .view-cart {
+        width: 120px;
+        height: 43px;
+        font-size: 13px;
+    }
+
+}
