@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub | Cart</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="container nav-container">
+        <a href="../index.html" class="logo">Foodie<span>Hub</span></a>
+
+        <nav class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="menu.html">Menu</a>
+            <a href="food-details.html">Food Details</a>
+            <a href="table-booking.html">Table Booking</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="wishlist.html">Wishlist</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="cart.html" class="cart-btn active-cart">🛒 Cart</a>
+            <a href="login.html" class="login-btn">Login</a>
+            <a href="register.html" class="signup-btn">Sign Up</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="cart-header">
+    <div class="container">
+        <p class="cart-label">FOODIEHUB</p>
+        <h1>Your Cart</h1>
+        <p>Review your selected items before placing your order.</p>
+    </div>
+</section>
+
+<section class="cart-section">
+    <div class="container cart-layout">
+
+        <div class="cart-left">
+
+            <div class="cart-top">
+                <div>
+                    <h2>Cart Items</h2>
+                    <p>3 items in your cart</p>
+                </div>
+                <a href="menu.html" class="continue-link">+ Add More Items</a>
+            </div>
+
+            <div class="cart-items">
+
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=300&q=80" alt="Cheese Pizza">
+                    </div>
+
+                    <div class="cart-item-info">
+                        <div class="item-title-row">
+                            <div>
+                                <h3>Cheese Pizza</h3>
+                                <p>Italiano Pizza</p>
+                            </div>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+
+                        <div class="item-bottom">
+                            <span class="item-price">₹249</span>
+
+                            <div class="quantity-box">
+                                <button>−</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+
+                            <strong class="item-total">₹249</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=300&q=80" alt="Classic Burger">
+                    </div>
+
+                    <div class="cart-item-info">
+                        <div class="item-title-row">
+                            <div>
+                                <h3>Classic Burger</h3>
+                                <p>Burger House</p>
+                            </div>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+
+                        <div class="item-bottom">
+                            <span class="item-price">₹199</span>
+
+                            <div class="quantity-box">
+                                <button>−</button>
+                                <span>2</span>
+                                <button>+</button>
+                            </div>
+
+                            <strong class="item-total">₹398</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=300&q=80" alt="Chicken Biryani">
+                    </div>
+
+                    <div class="cart-item-info">
+                        <div class="item-title-row">
+                            <div>
+                                <h3>Chicken Biryani</h3>
+                                <p>Spice Garden</p>
+                            </div>
+                            <button class="remove-btn">Remove</button>
+                        </div>
+
+                        <div class="item-bottom">
+                            <span class="item-price">₹299</span>
+
+                            <div class="quantity-box">
+                                <button>−</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+
+                            <strong class="item-total">₹299</strong>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="cart-note">
+                <span>💡</span>
+                <div>
+                    <strong>Good to know</strong>
+                    <p>You can change item quantities before proceeding to checkout.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="bill-card">
+            <h2>Bill Summary</h2>
+
+            <div class="bill-row">
+                <span>Item Total</span>
+                <span>₹946</span>
+            </div>
+
+            <div class="bill-row">
+                <span>Delivery Fee</span>
+                <span>₹40</span>
+            </div>
+
+            <div class="bill-row">
+                <span>Taxes & Charges</span>
+                <span>₹48</span>
+            </div>
+
+            <div class="bill-divider"></div>
+
+            <div class="bill-total">
+                <span>Grand Total</span>
+                <strong>₹1,034</strong>
+            </div>
+
+            <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+
+            <a href="menu.html" class="shopping-btn">Continue Shopping</a>
+
+            <div class="secure-payment">
+                <span>🔒</span>
+                <p>Secure checkout experience</p>
+            </div>
+        </aside>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-container">
+
+        <div class="footer-about">
+            <a href="../index.html" class="logo">Foodie<span>Hub</span></a>
+            <p>Your simple destination for discovering delicious food and restaurants.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="menu.html">Menu</a>
+            <a href="food-details.html">Food Details</a>
+            <a href="wishlist.html">Wishlist</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Services</h3>
+            <a href="table-booking.html">Table Booking</a>
+            <a href="tracking.html">Order Tracking</a>
+            <a href="../restaurant/dashboard.html">Restaurant Management</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Account</h3>
+            <a href="login.html">Login</a>
+            <a href="register.html">Sign Up</a>
+            <a href="cart.html">Cart</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 FoodieHub. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
