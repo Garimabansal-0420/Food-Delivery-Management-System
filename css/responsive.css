@@ -256,3 +256,63 @@
         padding-top: 45px;
     }
 }
+
+@media (max-width: 900px) {
+    .cart-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .bill-card {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .cart-header {
+        padding: 40px 0;
+    }
+
+    .cart-header h1 {
+        font-size: 34px;
+    }
+
+    .cart-section {
+        padding: 40px 0 60px;
+    }
+
+    .cart-top {
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .cart-item {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .cart-item-image {
+        width: 95px;
+        height: 95px;
+    }
+
+    .item-title-row h3 {
+        font-size: 15px;
+    }
+
+    .item-title-row p {
+        font-size: 11px;
+    }
+
+    .item-bottom {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .item-total {
+        margin-left: 0;
+    }
+
+    .bill-card {
+        padding: 20px;
+    }
+}
