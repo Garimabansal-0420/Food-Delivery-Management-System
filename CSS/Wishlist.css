@@ -1,0 +1,931 @@
+```css
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #fff;
+
+    color: #222;
+}
+
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+}
+
+
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.navbar {
+    width: 100%;
+
+    height: 104px;
+
+    background: #fff;
+
+    border-top: 7px solid #4a3a32;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.nav-container {
+    width: 81%;
+
+    max-width: 1280px;
+
+    height: 97px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+
+/* ============================= */
+/* SWIGGY LOGO */
+/* ============================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+}
+
+
+.logo-box {
+    width: 69px;
+
+    height: 69px;
+
+    background: #ff5200;
+
+    border-radius: 19px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* White location-pin style icon */
+
+.logo-pin {
+    width: 25px;
+
+    height: 30px;
+
+    border: 3px solid white;
+
+    border-radius: 50% 50% 50% 50%;
+
+    position: relative;
+}
+
+
+.logo-pin::before {
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+
+    height: 17px;
+
+    background: white;
+
+    top: 3px;
+
+    left: 9px;
+}
+
+
+.logo-pin::after {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-left: 3px solid white;
+
+    border-bottom: 3px solid white;
+
+    transform: rotate(-45deg);
+
+    bottom: -7px;
+
+    left: 4px;
+
+    background: #ff5200;
+}
+
+
+
+/* ============================= */
+/* OTHER */
+/* ============================= */
+
+.other {
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+
+    margin-right: auto;
+}
+
+
+.other a {
+    font-size: 16px;
+
+    font-weight: 600;
+
+    padding-bottom: 6px;
+
+    border-bottom: 2px solid #222;
+}
+
+
+.other-arrow {
+    color: #ff5200;
+
+    font-size: 11px;
+
+    transform: translateY(2px);
+}
+
+
+
+/* ============================= */
+/* NAVIGATION */
+/* ============================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+}
+
+
+.nav-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+
+.nav-item:hover {
+    color: #ff5200;
+}
+
+
+.nav-icon {
+    width: 25px;
+
+    height: 25px;
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+
+/* ============================= */
+/* BRIEFCASE ICON */
+/* ============================= */
+
+.briefcase-icon {
+    border: 2px solid #222;
+
+    border-radius: 3px;
+
+    width: 21px;
+
+    height: 16px;
+}
+
+
+.briefcase-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 5px;
+
+    border: 2px solid #222;
+
+    border-bottom: none;
+
+    border-radius: 3px 3px 0 0;
+
+    top: -6px;
+
+    left: 4px;
+}
+
+
+
+/* ============================= */
+/* SEARCH ICON */
+/* ============================= */
+
+.search-icon {
+    width: 19px;
+
+    height: 19px;
+
+    border: 2px solid #222;
+
+    border-radius: 50%;
+}
+
+
+.search-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 2px;
+
+    background: #222;
+
+    transform: rotate(-45deg);
+
+    right: -6px;
+
+    bottom: -3px;
+}
+
+
+
+/* ============================= */
+/* HELP ICON */
+/* ============================= */
+
+.help-icon {
+    border: 2px solid #222;
+
+    border-radius: 50%;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+
+
+/* ============================= */
+/* USER ICON */
+/* ============================= */
+
+.user-icon::before {
+    content: "";
+
+    width: 9px;
+
+    height: 9px;
+
+    border: 2px solid #222;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 0;
+}
+
+
+.user-icon::after {
+    content: "";
+
+    width: 20px;
+
+    height: 10px;
+
+    border: 2px solid #222;
+
+    border-bottom: none;
+
+    border-radius: 12px 12px 0 0;
+
+    position: absolute;
+
+    bottom: 1px;
+}
+
+
+
+/* ============================= */
+/* CART ICON */
+/* ============================= */
+
+.cart-icon {
+    width: 20px;
+
+    height: 18px;
+
+    border: 2px solid #222;
+
+    border-radius: 3px;
+}
+
+
+.cart-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+
+    height: 2px;
+
+    background: #222;
+
+    top: -5px;
+
+    left: 4px;
+}
+
+
+
+/* ============================= */
+/* FAVORITES SECTION */
+/* ============================= */
+
+.favorites-section {
+    padding-top: 70px;
+
+    padding-bottom: 80px;
+}
+
+
+.favorites-container {
+    width: 81%;
+
+    max-width: 1280px;
+
+    margin: auto;
+}
+
+
+.favorites-container h1 {
+    font-size: 47px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    margin-bottom: 43px;
+}
+
+
+
+/* ============================= */
+/* SORT */
+/* ============================= */
+
+.sort-container {
+    margin-bottom: 28px;
+}
+
+
+.sort-select {
+    min-width: 110px;
+
+    height: 43px;
+
+    padding: 0 14px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 22px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+
+.sort-select:hover {
+    border-color: #aaa;
+}
+
+
+.sort-select:focus {
+    border-color: #ff5200;
+}
+
+
+
+/* ============================= */
+/* RESTAURANT GRID */
+/* ============================= */
+
+.restaurant-grid {
+    display: grid;
+
+    grid-template-columns: 335px 335px;
+
+    gap: 35px;
+}
+
+
+
+/* ============================= */
+/* CARD */
+/* ============================= */
+
+.restaurant-card {
+    width: 335px;
+}
+
+
+
+/* ============================= */
+/* IMAGE */
+/* ============================= */
+
+.restaurant-image {
+    width: 335px;
+
+    height: 222px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #eee;
+}
+
+
+.restaurant-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Dark gradient */
+
+.restaurant-image::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 90px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.85)
+    );
+
+    pointer-events: none;
+}
+
+
+
+/* ============================= */
+/* PRICE */
+/* ============================= */
+
+.price-overlay {
+    position: absolute;
+
+    left: 14px;
+
+    bottom: 11px;
+
+    z-index: 2;
+
+    color: #fff;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+
+
+/* ============================= */
+/* RESTAURANT INFO */
+/* ============================= */
+
+.restaurant-info {
+    padding: 11px 14px 0;
+}
+
+
+.restaurant-info h2 {
+    font-size: 18px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    margin-bottom: 3px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+
+/* ============================= */
+/* RATING */
+/* ============================= */
+
+.rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 3px;
+}
+
+
+.star {
+    width: 21px;
+
+    height: 21px;
+
+    background: #1f9d48;
+
+    color: #fff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+}
+
+
+.rating span:last-child {
+    font-size: 14px;
+}
+
+
+
+/* ============================= */
+/* DETAILS */
+/* ============================= */
+
+.restaurant-info p {
+    font-size: 14px;
+
+    color: #666;
+
+    line-height: 1.6;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+
+/* ============================= */
+/* ORDER / REMOVE BUTTONS */
+/* ============================= */
+
+.restaurant-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 13px;
+}
+
+
+.order-btn,
+.remove-btn {
+    height: 38px;
+
+    padding: 0 17px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.order-btn {
+    background: #ff5200;
+
+    color: white;
+
+    border: 1px solid #ff5200;
+}
+
+
+.order-btn:hover {
+    background: #e94b00;
+
+    border-color: #e94b00;
+}
+
+
+.remove-btn {
+    background: white;
+
+    color: #555;
+
+    border: 1px solid #ddd;
+}
+
+
+.remove-btn:hover {
+    color: #ff5200;
+
+    border-color: #ff5200;
+
+    background: #fff8f4;
+}
+
+
+
+/* ============================= */
+/* 1100px */
+/* ============================= */
+
+@media (max-width: 1100px) {
+
+    .nav-container {
+        width: 92%;
+    }
+
+
+    .nav-links {
+        gap: 20px;
+    }
+
+
+    .nav-item {
+        font-size: 13px;
+    }
+
+
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 335px);
+    }
+
+}
+
+
+
+/* ============================= */
+/* 900px */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        height: auto;
+    }
+
+
+    .nav-container {
+        width: 92%;
+
+        height: auto;
+
+        padding: 14px 0;
+
+        flex-wrap: wrap;
+    }
+
+
+    .other {
+        margin-right: 0;
+    }
+
+
+    .nav-links {
+        width: 100%;
+
+        order: 3;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 18px;
+    }
+
+
+    .favorites-container {
+        width: 92%;
+    }
+
+
+    .favorites-container h1 {
+        font-size: 40px;
+    }
+
+
+    .restaurant-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 25px;
+    }
+
+
+    .restaurant-card,
+    .restaurant-image {
+        width: 100%;
+    }
+
+}
+
+
+
+/* ============================= */
+/* 600px */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .favorites-section {
+        padding-top: 45px;
+
+        padding-bottom: 60px;
+    }
+
+
+    .favorites-container {
+        width: 92%;
+    }
+
+
+    .favorites-container h1 {
+        font-size: 32px;
+
+        margin-bottom: 30px;
+    }
+
+
+    .restaurant-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .restaurant-card {
+        width: 100%;
+    }
+
+
+    .restaurant-image {
+        width: 100%;
+
+        height: 220px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+    }
+
+
+    .nav-item {
+        font-size: 12px;
+    }
+
+
+    .restaurant-buttons {
+        width: 100%;
+    }
+
+
+    .order-btn,
+    .remove-btn {
+        flex: 1;
+    }
+
+}
+
+
+
+/* ============================= */
+/* 400px */
+/* ============================= */
+
+@media (max-width: 400px) {
+
+    .favorites-container h1 {
+        font-size: 28px;
+    }
+
+
+    .restaurant-image {
+        height: 190px;
+    }
+
+
+    .nav-links {
+        gap: 10px;
+    }
+
+
+    .nav-item {
+        font-size: 10px;
+    }
+
+}
+```
