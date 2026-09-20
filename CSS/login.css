@@ -8,23 +8,26 @@ body{
                  sans-serif;
     background-color: #FFF7ED; 
 }
+
 a{
     text-decoration: none;
     color:white
 }
+
 .container{
     display:flex;
-    
     width:60%;
     margin:5% auto 0% auto;
     border-radius: 30px;
 }
+
 .box1{
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     width:50%;
     
 }
+
 .box2{
     background-color: white;
     border-top-right-radius: 30px;
@@ -32,6 +35,7 @@ a{
     width:50%;
     
 }
+
 .box2 h1{
     margin-top:50px;
     text-align: center;
@@ -44,10 +48,12 @@ a{
     margin-bottom:2px;
     
 }
+
 span{
     color:#ea580c;
     
 }
+
 .box2 h3{
     font-family: 'Trebuchet MS',
                  'Lucida Sans Unicode',
@@ -59,12 +65,14 @@ span{
     margin-top: 2px;
     font-size: 1.5em;
 }
+
 label{
     text-align: center;
     margin-left:40%;
     font-size: 1.2em;
     
 }
+
 input{
     margin-left:15%;
     width:300px;
@@ -74,6 +82,7 @@ input{
     margin-bottom:20px;
 
 }
+
 button{
      margin-left:15%;
      width: 300px;
@@ -93,15 +102,15 @@ button{
     transition-duration:0.4s ;
      
 }
+
 button:hover{
     box-shadow: 2px 2px 4px #ea580c;
 }
+
 h5{
     text-align: center;
     font-size: 0.9em;
 }
-
-
 
 @media (max-width: 1100px) {
 
@@ -132,9 +141,6 @@ h5{
         margin-left: 10%;
     }
 }
-
-
-
 
 @media (max-width: 800px) {
 
@@ -175,9 +181,6 @@ h5{
         font-size: 0.8em;
     }
 }
-
-
-/* ---------- Mobile ---------- */
 
 @media (max-width: 600px) {
 
@@ -224,41 +227,29 @@ h5{
 
     label {
         display: block;
-
         width: 85%;
-
         margin-left: auto;
         margin-right: auto;
-
         text-align: left;
-
         font-size: 1em;
     }
 
     input {
         display: block;
-
         width: 85%;
-
         margin-left: auto;
         margin-right: auto;
-
         height: 38px;
-
         margin-top: 8px;
         margin-bottom: 15px;
     }
 
     button {
         display: block;
-
         width: 85%;
-
         margin-left: auto;
         margin-right: auto;
-
         height: 42px;
-
         font-size: 1.1em;
     }
 
