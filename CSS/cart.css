@@ -78,7 +78,7 @@
 }
 
 .cart-item:hover {
-    box-shadow: 0 10px 25px rgba(0,0,0,.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
 }
 
 .cart-item-image {
@@ -207,7 +207,7 @@
     padding: 25px;
     position: sticky;
     top: 95px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .05);
 }
 
 .bill-card h2 {
