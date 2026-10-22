@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub - Table Booking</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSS/table-booking.css">
+</head>
+
+<body>
+
+
+
+    <header class="navbar">
+
+        <div class="foodie-nav-container">
+
+            <a href="homepage.html" class="foodie-logo">
+                Foodie<span>Hub</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="homepage.html">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="menu.html">Menu</a>
+                <a href="fooddetails.html">Food Details</a>
+                <a href="../HTML/booking.html" class="active">Table Booking</a>
+                <a href="tracking.html">Tracking</a>
+                <a href="Wishlist.html">Wishlist</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="registration.html" class="signup-btn">Sign Up</a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= TABLE BOOKING PAGE ================= -->
+
+    <main class="booking-page">
+
+        <!-- Progress -->
+
+        <div class="progress-container">
+
+            <div class="progress-step active">
+                <span>1</span>
+                <p>Select Restaurant</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step active">
+                <span>2</span>
+                <p>Select Table</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>3</span>
+                <p>Booking Details</p>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <span>4</span>
+                <p>Confirmation</p>
+            </div>
+
+        </div>
+
+
+        <!-- Celebration -->
+
+        <section class="celebration-section">
+
+            <div class="floating-food food-1">🍕</div>
+            <div class="floating-food food-2">🍔</div>
+            <div class="floating-food food-3">🍰</div>
+            <div class="floating-food food-4">🥗</div>
+
+            <div class="restaurant-card">
+
+                <div class="restaurant-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+                        alt="Restaurant">
+
+                    <span class="restaurant-status">
+                        <i class="fa-solid fa-circle"></i>
+                        Open Now
+                    </span>
+                </div>
+
+                <div class="restaurant-info">
+
+                    <h1>Spice Haven</h1>
+
+                    <p class="restaurant-type">
+                        <i class="fa-solid fa-utensils"></i>
+                        Fine Dining Restaurant
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        24 MG Road, New Delhi
+                    </p>
+
+                    <div class="rating">
+                        <span>★</span>
+                        4.8
+                        <small>(250+ Reviews)</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Booking Area -->
+
+        <section class="booking-container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="table-area">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Select Your Table</h2>
+                        <p>Choose your preferred table for your dining experience.</p>
+                    </div>
+
+                    <div class="table-status">
+
+                        <div>
+                            <span class="available-dot"></span>
+                            Available
+                        </div>
+
+                        <div>
+                            <span class="selected-dot"></span>
+                            Selected
+                        </div>
+
+                        <div>
+                            <span class="occupied-dot"></span>
+                            Occupied
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Restaurant Floor -->
+
+                <div class="restaurant-floor">
+
+                    <div class="floor-label">
+                        <i class="fa-solid fa-door-open"></i>
+                        Entrance
+                    </div>
+
+
+                    <div class="table-grid">
+
+                        <button class="table available" onclick="selectTable(this, 'T1')">
+                            <strong>T1</strong>
+                            <span>2 Seats</span>
+                        </button>
+
+                        <button class="table occupied">
+                            <strong>T2</strong>
+                            <span>4 Seats</span>
+                        </button>
+
+                        <button class="table available" onclick="selectTable(this, 'T3')">
+                            <strong>T3</strong>
+                            <span>4 Seats</span>
+                        </button>
+
+                        <button class="table selected" onclick="selectTable(this, 'T4')">
+                            <strong>T4</strong>
+                            <span>6 Seats</span>
+                        </button>
+
+                        <button class="table available" onclick="selectTable(this, 'T5')">
+                            <strong>T5</strong>
+                            <span>2 Seats</span>
+                        </button>
+
+                        <button class="table occupied">
+                            <strong>T6</strong>
+                            <span>6 Seats</span>
+                        </button>
+
+                        <button class="table available" onclick="selectTable(this, 'T7')">
+                            <strong>T7</strong>
+                            <span>4 Seats</span>
+                        </button>
+
+                        <button class="table available" onclick="selectTable(this, 'T8')">
+                            <strong>T8</strong>
+                            <span>8 Seats</span>
+                        </button>
+
+                    </div>
+
+                    <div class="kitchen-area">
+                        <i class="fa-solid fa-kitchen-set"></i>
+                        Kitchen
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="booking-details">
+
+                <h2>Booking Details</h2>
+
+                <!-- Date -->
+
+                <div class="input-group">
+
+                    <label>
+                        <i class="fa-regular fa-calendar"></i>
+                        Date
+                    </label>
+
+                    <input type="date">
+
+                </div>
+
+
+                <!-- Time -->
+
+                <div class="input-group">
+
+                    <label>
+                        <i class="fa-regular fa-clock"></i>
+                        Time
+                    </label>
+
+                    <input type="time" value="19:30">
+
+                </div>
+
+
+                <!-- Guests -->
+
+                <div class="input-group">
+
+                    <label>
+                        <i class="fa-solid fa-users"></i>
+                        Number of Guests
+                    </label>
+
+                    <div class="guest-selector">
+
+                        <button onclick="changeGuests(-1)">−</button>
+
+                        <span id="guestCount">2</span>
+
+                        <button onclick="changeGuests(1)">+</button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Customer Details -->
+
+                <div class="customer-section">
+
+                    <h3>Customer Information</h3>
+
+                    <input type="text" placeholder="Full Name">
+
+                    <input type="email" placeholder="Email Address">
+
+                    <input type="tel" placeholder="Phone Number">
+
+                </div>
+
+
+                <!-- Selected Table -->
+
+                <div class="selected-table-box">
+
+                    <div>
+                        <span>Selected Table</span>
+                        <strong id="selectedTable">T4</strong>
+                    </div>
+
+                    <div>
+                        <span>Capacity</span>
+                        <strong id="tableCapacity">6 Guests</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Summary -->
+
+                <div class="booking-summary">
+
+                    <h3>Booking Summary</h3>
+
+                    <div>
+                        <span>Restaurant</span>
+                        <strong>Spice Haven</strong>
+                    </div>
+
+                    <div>
+                        <span>Table</span>
+                        <strong id="summaryTable">T4</strong>
+                    </div>
+
+                    <div>
+                        <span>Guests</span>
+                        <strong id="summaryGuests">2</strong>
+                    </div>
+
+                    <div class="summary-total">
+                        <span>Booking Fee</span>
+                        <strong>₹99</strong>
+                    </div>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="booking-actions">
+
+                    <button class="reset-btn" onclick="resetBooking()">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Reset
+                    </button>
+
+                    <button class="confirm-btn" onclick="confirmBooking()">
+                        Confirm Booking
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+                <button class="call-btn" onclick="callRestaurant()">
+                    <i class="fa-solid fa-phone"></i>
+                    Call Restaurant
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOODIEHUB FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="foodie-footer-container">
+
+            <div class="footer-about">
+
+                <a href="homepage.html" class="foodie-logo">
+                    Foodie<span>Hub</span>
+                </a>
+
+                <p>
+                    Your simple destination for discovering delicious
+                    food and restaurants.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Explore</h3>
+
+                <a href="restaurants.html">Restaurants</a>
+                <a href="menu.html">Menu</a>
+                <a href="food-details.html">Food Details</a>
+                <a href="wishlist.html">Wishlist</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Services</h3>
+
+                <a href="table-booking.html">Table Booking</a>
+                <a href="tracking.html">Order Tracking</a>
+                <a href="dashboard.html">Restaurant Management</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Account</h3>
+
+                <a href="login.html">Login</a>
+                <a href="register.html">Sign Up</a>
+                <a href="cart.html">Cart & Checkout</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 FoodieHub. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script>
+
+        let selectedTable = "T4";
+
+        const tableData = {
+            T1: "2 Guests",
+            T3: "4 Guests",
+            T4: "6 Guests",
+            T5: "2 Guests",
+            T7: "4 Guests",
+            T8: "8 Guests"
+        };
+
+
+        function selectTable(table, tableName) {
+
+            document.querySelectorAll(".table.available, .table.selected")
+                .forEach(item => {
+                    item.classList.remove("selected");
+                });
+
+            table.classList.add("selected");
+
+            selectedTable = tableName;
+
+            document.getElementById("selectedTable").textContent = tableName;
+            document.getElementById("summaryTable").textContent = tableName;
+            document.getElementById("tableCapacity").textContent =
+                tableData[tableName];
+
+        }
+
+
+        function changeGuests(value) {
+
+            const guestElement = document.getElementById("guestCount");
+
+            let guests = parseInt(guestElement.textContent);
+
+            guests += value;
+
+            if (guests < 1) {
+                guests = 1;
+            }
+
+            if (guests > 10) {
+                guests = 10;
+            }
+
+            guestElement.textContent = guests;
+
+            document.getElementById("summaryGuests").textContent = guests;
+
+        }
+
+
+        function resetBooking() {
+
+            document.getElementById("guestCount").textContent = "2";
+
+            document.getElementById("summaryGuests").textContent = "2";
+
+            document.getElementById("selectedTable").textContent = "T4";
+
+            document.getElementById("summaryTable").textContent = "T4";
+
+            document.getElementById("tableCapacity").textContent = "6 Guests";
+
+            selectedTable = "T4";
+
+        }
+
+
+        function confirmBooking() {
+
+            alert(
+                "🎉 Table " +
+                selectedTable +
+                " has been booked successfully!"
+            );
+
+        }
+
+
+        function callRestaurant() {
+
+            alert("📞 Calling Spice Haven...");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

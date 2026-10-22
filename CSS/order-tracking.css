@@ -1,0 +1,1604 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f1e9;
+    color: #222;
+}
+
+
+/* =====================================================
+   FOODIEHUB HEADER
+===================================================== */
+
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+}
+
+.foodie-nav-container {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 74px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.foodie-logo {
+    font-size: 27px;
+    font-weight: 700;
+
+    color: #222222;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.foodie-logo span {
+    color: #ff6b35;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.nav-links a {
+    color: #333333;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ff6b35;
+}
+
+
+/* Navigation buttons */
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.login-btn {
+    color: #222222;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 9px 13px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    color: #ff6b35;
+}
+
+.signup-btn {
+    background: #ff6b35;
+
+    color: #ffffff;
+
+    padding: 10px 17px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background: #e85a28;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+    width: 100%;
+    max-width: none;
+
+    min-height: 100vh;
+
+    padding: 45px 6% 70px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   FLOATING STICKERS
+===================================================== */
+
+.floating-sticker {
+    position: absolute;
+
+    font-size: 40px;
+
+    pointer-events: none;
+
+    animation: floating 4s ease-in-out infinite;
+
+    z-index: 1;
+}
+
+.sticker-1 {
+    top: 150px;
+    left: 25px;
+}
+
+.sticker-2 {
+    top: 400px;
+    right: 25px;
+
+    animation-delay: 1s;
+}
+
+.sticker-3 {
+    top: 750px;
+    left: 40px;
+
+    animation-delay: 2s;
+}
+
+.sticker-4 {
+    top: 1000px;
+    right: 45px;
+
+    animation-delay: 1.5s;
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(8deg);
+    }
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero-section {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.hero-image-wrapper {
+    height: 360px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    animation: imageZoom 12s ease-in-out infinite alternate;
+}
+
+@keyframes imageZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+.image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.72),
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.05)
+        );
+}
+
+.hero-content {
+    position: absolute;
+
+    top: 50%;
+    left: 7%;
+
+    transform: translateY(-50%);
+
+    color: white;
+
+    max-width: 550px;
+}
+
+.live-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    background: rgba(255, 107, 53, 0.95);
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+}
+
+.live-badge i {
+    font-size: 7px;
+
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    margin-bottom: 18px;
+}
+
+.hero-content h1 span {
+    color: #ff8a5b;
+}
+
+.hero-content p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #eeeeee;
+
+    max-width: 480px;
+}
+
+
+/* =====================================================
+   ORDER INFO
+===================================================== */
+
+.order-info-card {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 25px auto 0;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 20px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.restaurant-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.restaurant-logo {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 15px;
+
+    background: #fff1ea;
+
+    color: #ff6b35;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.restaurant-info h2 {
+    font-size: 22px;
+
+    margin-bottom: 6px;
+}
+
+.restaurant-info p {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.restaurant-info p i {
+    color: #ffb000;
+}
+
+.restaurant-info p span {
+    margin: 0 5px;
+
+    color: #bbb;
+}
+
+.order-number {
+    text-align: right;
+}
+
+.order-number span {
+    display: block;
+
+    font-size: 10px;
+
+    color: #999;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 4px;
+}
+
+.order-number strong {
+    font-size: 16px;
+
+    color: #ff6b35;
+}
+
+
+/* =====================================================
+   STATUS CARD
+===================================================== */
+
+.status-card {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 25px auto 0;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.status-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.status-label {
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    color: #999;
+
+    font-weight: 700;
+}
+
+.status-top h2 {
+    margin-top: 8px;
+
+    font-size: 26px;
+
+    color: #333;
+}
+
+.status-top h2 i {
+    color: #ff6b35;
+
+    margin-right: 7px;
+}
+
+.status-top p {
+    margin-top: 6px;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* Chef animation */
+
+.status-animation {
+    position: relative;
+
+    width: 85px;
+    height: 85px;
+}
+
+.chef-circle {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: #fff1ea;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+
+    animation: chefBounce 2s ease-in-out infinite;
+}
+
+@keyframes chefBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+.steam {
+    position: absolute;
+
+    color: #aaa;
+
+    font-size: 20px;
+
+    animation: steamUp 2s infinite;
+}
+
+.steam-1 {
+    top: -12px;
+    left: 22px;
+}
+
+.steam-2 {
+    top: -15px;
+    left: 42px;
+
+    animation-delay: 0.6s;
+}
+
+@keyframes steamUp {
+
+    0% {
+        opacity: 0;
+
+        transform: translateY(10px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform: translateY(-15px);
+    }
+}
+
+
+/* Progress */
+
+.progress-wrapper {
+    margin-top: 30px;
+
+    position: relative;
+}
+
+.progress-bar {
+    height: 5px;
+
+    background: #eeeeee;
+
+    border-radius: 10px;
+
+    position: absolute;
+
+    top: 23px;
+
+    left: 7%;
+
+    right: 7%;
+}
+
+.progress-fill {
+    height: 100%;
+
+    width: 38%;
+
+    background: #ff6b35;
+
+    border-radius: 10px;
+
+    animation: progressMove 2s ease;
+}
+
+@keyframes progressMove {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 38%;
+    }
+}
+
+.progress-icons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.progress-item {
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: 11px;
+}
+
+.progress-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f0f0f0;
+
+    color: #aaa;
+
+    border: 4px solid white;
+
+    transition: 0.3s;
+}
+
+.progress-item span {
+    display: block;
+
+    margin-top: 9px;
+}
+
+.progress-item.completed .progress-icon,
+.progress-item.active .progress-icon {
+    background: #ff6b35;
+
+    color: white;
+}
+
+.progress-item.completed,
+.progress-item.active {
+    color: #ff6b35;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   TRACKING GRID
+===================================================== */
+
+.tracking-grid {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 25px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1.15fr 0.85fr;
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   COMMON CARD
+===================================================== */
+
+.timeline-card,
+.delivery-card,
+.summary-card {
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.card-heading {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.small-title {
+    font-size: 10px;
+
+    color: #999;
+
+    letter-spacing: 1.4px;
+
+    font-weight: 700;
+}
+
+.card-heading h2 {
+    margin-top: 7px;
+
+    font-size: 23px;
+}
+
+.live-dot {
+    background: #fff1ea;
+
+    color: #ff6b35;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.live-dot::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #ff6b35;
+
+    margin-right: 5px;
+
+    animation: blink 1s infinite;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline {
+    margin-top: 30px;
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 52px 25px 1fr;
+
+    min-height: 100px;
+
+    position: relative;
+}
+
+.timeline-icon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    color: #999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.timeline-item.completed .timeline-icon,
+.timeline-item.active .timeline-icon {
+    background: #ff6b35;
+
+    color: white;
+}
+
+.timeline-item.active .timeline-icon {
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(255, 107, 53, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+    }
+}
+
+.timeline-line {
+    width: 2px;
+
+    height: 75px;
+
+    background: #e6e6e6;
+
+    margin-left: 21px;
+
+    margin-top: 42px;
+}
+
+.timeline-item.completed .timeline-line {
+    background: #ff6b35;
+}
+
+.timeline-content {
+    padding-left: 8px;
+}
+
+.timeline-content h3 {
+    font-size: 15px;
+
+    margin-top: 3px;
+
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.timeline-content span {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 11px;
+
+    color: #aaa;
+}
+
+.timeline-item.active .timeline-content h3 {
+    color: #ff6b35;
+}
+
+
+/* =====================================================
+   RIGHT COLUMN
+===================================================== */
+
+.right-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   ETA
+===================================================== */
+
+.eta-card {
+    background: linear-gradient(
+        135deg,
+        #ff6b35,
+        #f98a5b
+    );
+
+    color: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+        0 12px 30px rgba(255, 107, 53, 0.25);
+}
+
+.eta-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+.eta-card span {
+    font-size: 10px;
+
+    letter-spacing: 1.2px;
+
+    opacity: 0.8;
+}
+
+.eta-card h2 {
+    font-size: 28px;
+
+    margin: 4px 0;
+}
+
+.eta-card p {
+    font-size: 12px;
+
+    opacity: 0.85;
+}
+
+
+/* =====================================================
+   DELIVERY PARTNER
+===================================================== */
+
+.delivery-bike {
+    color: #ff6b35;
+
+    font-size: 25px;
+
+    animation: bikeMove 2s ease-in-out infinite;
+}
+
+@keyframes bikeMove {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.partner-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 25px;
+}
+
+.partner-avatar {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #fff1ea;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+}
+
+.partner-details {
+    flex: 1;
+}
+
+.partner-details h3 {
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+.partner-details p {
+    color: #ffb000;
+
+    font-size: 12px;
+}
+
+.partner-details p span {
+    color: #aaa;
+
+    margin-left: 3px;
+}
+
+.call-button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #fff1ea;
+
+    color: #ff6b35;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.call-button:hover {
+    background: #ff6b35;
+
+    color: white;
+
+    transform: scale(1.08);
+}
+
+.delivery-message {
+    margin-top: 18px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+
+    display: flex;
+
+    gap: 10px;
+
+    align-items: flex-start;
+}
+
+.delivery-message i {
+    color: #ff6b35;
+
+    margin-top: 2px;
+}
+
+.delivery-message p {
+    color: #888;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   ORDER SUMMARY
+===================================================== */
+
+.food-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.food-image {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.3s;
+}
+
+.food-image img:hover {
+    transform: scale(1.1);
+}
+
+.food-info {
+    flex: 1;
+}
+
+.food-info h3 {
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+.food-info p {
+    font-size: 11px;
+
+    color: #999;
+}
+
+.food-item > strong {
+    font-size: 13px;
+}
+
+.total-row {
+    border-top: 1px dashed #ddd;
+
+    margin-top: 20px;
+
+    padding-top: 18px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.total-row span {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.total-row strong {
+    font-size: 21px;
+
+    color: #ff6b35;
+}
+
+
+/* =====================================================
+   ENJOY SECTION
+===================================================== */
+
+.enjoy-section {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 25px auto 0;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.enjoy-icon {
+    font-size: 42px;
+
+    animation: burgerBounce 2s ease-in-out infinite;
+}
+
+@keyframes burgerBounce {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+}
+
+.enjoy-section h2 {
+    font-size: 25px;
+
+    margin-top: 8px;
+}
+
+.enjoy-section p {
+    color: #888;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+.confetti {
+    position: absolute;
+
+    color: #ff6b35;
+
+    font-size: 25px;
+
+    animation: confettiFloat 3s infinite;
+}
+
+.confetti-1 {
+    left: 25%;
+
+    top: 25px;
+}
+
+.confetti-2 {
+    right: 25%;
+
+    top: 35px;
+
+    animation-delay: 1s;
+}
+
+.confetti-3 {
+    right: 10%;
+
+    bottom: 20px;
+
+    animation-delay: 0.5s;
+}
+
+@keyframes confettiFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(180deg);
+    }
+}
+
+
+/* =====================================================
+   FOODIEHUB FOOTER
+===================================================== */
+
+.footer {
+    width: 100%;
+
+    background: #222222;
+
+    color: #ffffff;
+
+    padding-top: 55px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.foodie-footer-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding-bottom: 45px;
+}
+
+.footer .foodie-logo {
+    color: #ffffff;
+
+    margin-bottom: 12px;
+
+    display: inline-block;
+}
+
+.footer-about p {
+    color: #aaaaaa;
+
+    font-size: 14px;
+
+    max-width: 320px;
+
+    line-height: 1.7;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.footer-links h3 {
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #aaaaaa;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff6b35;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444444;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.footer-bottom p {
+    color: #999999;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   RESPONSIVE - 1100px
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .tracking-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 900px
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .foodie-nav-container {
+        width: 92%;
+
+        min-height: auto;
+
+        flex-wrap: wrap;
+
+        padding: 14px 0;
+
+        gap: 14px;
+    }
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 16px;
+    }
+
+    .nav-actions {
+        margin-left: auto;
+    }
+
+    .foodie-footer-container {
+        width: 92%;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-image-wrapper {
+        height: 330px;
+    }
+
+    .container {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - 600px
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .foodie-nav-container {
+        width: 92%;
+
+        flex-direction: column;
+
+        padding: 15px 0;
+    }
+
+    .foodie-logo {
+        font-size: 25px;
+    }
+
+    .nav-links {
+        order: initial;
+
+        width: 100%;
+
+        gap: 12px 17px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-actions {
+        margin: 0;
+    }
+
+
+    .container {
+        padding: 25px 4% 50px;
+    }
+
+
+    .hero-image-wrapper {
+        height: 400px;
+    }
+
+    .hero-content {
+        left: 7%;
+        right: 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+
+    .order-info-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 20px;
+    }
+
+    .order-number {
+        text-align: left;
+    }
+
+
+    .status-card {
+        padding: 20px;
+    }
+
+    .status-top {
+        align-items: flex-start;
+    }
+
+    .status-top h2 {
+        font-size: 21px;
+    }
+
+    .chef-circle {
+        width: 60px;
+        height: 60px;
+
+        font-size: 30px;
+    }
+
+
+    .progress-item span {
+        font-size: 9px;
+    }
+
+    .progress-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 12px;
+    }
+
+    .progress-bar {
+        top: 19px;
+    }
+
+
+    .timeline-card,
+    .delivery-card,
+    .summary-card {
+        padding: 20px;
+    }
+
+
+    .foodie-footer-container {
+        width: 92%;
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .footer-about p {
+        margin: auto;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+}
