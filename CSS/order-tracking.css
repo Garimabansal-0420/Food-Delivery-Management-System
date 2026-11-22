@@ -1602,3 +1602,314 @@ body {
     }
 
 }
+
+
+
+/* =====================================================
+   TRACKING DEMO CONTROLS
+===================================================== */
+
+.tracking-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.tracking-controls button,
+.order-details-btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #ff6b35;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tracking-controls button:hover,
+.order-details-btn:hover {
+    background: #e85a28;
+    transform: translateY(-2px);
+}
+
+.tracking-controls button:disabled {
+    background: #999;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.tracking-controls button:last-child {
+    background: #fff1ea;
+    color: #ff6b35;
+}
+
+
+/* =====================================================
+   FOOD QUANTITY CONTROLS
+===================================================== */
+
+.food-quantity-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.food-quantity-controls button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #fff1ea;
+    color: #ff6b35;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.food-quantity-controls button:hover {
+    background: #ff6b35;
+    color: white;
+}
+
+.food-quantity-controls .quantity {
+    font-size: 13px;
+}
+
+.food-quantity-controls .remove {
+    background: #ffe8e8;
+    color: #d62828;
+    font-size: 11px;
+}
+
+.order-details-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   MY TABLE BOOKINGS
+===================================================== */
+
+.booking-history {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.booking-history-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.booking-history-heading h2 {
+    font-size: 25px;
+    margin-top: 8px;
+}
+
+.booking-history-heading p {
+    color: #888;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.new-booking-btn,
+.no-bookings a {
+    display: inline-block;
+    background: #ff6b35;
+    color: white;
+    text-decoration: none;
+    padding: 11px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.new-booking-btn:hover,
+.no-bookings a:hover {
+    background: #e85a28;
+}
+
+.booking-history-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px;
+    margin-top: 15px;
+    background: #fffaf7;
+    border: 1px solid #f3e5dc;
+    border-left: 4px solid #ff6b35;
+    border-radius: 12px;
+}
+
+.booking-history-details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.booking-history-details p {
+    color: #777;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.booking-status {
+    background: #e7f8ec;
+    color: #218838;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.no-bookings {
+    text-align: center;
+    padding: 35px 15px;
+    background: #fffaf7;
+    border-radius: 12px;
+}
+
+.no-bookings-icon {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.no-bookings h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.no-bookings p {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.custom-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.custom-modal-content {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 28px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.custom-modal-content h2 {
+    margin-bottom: 18px;
+}
+
+.custom-modal-content p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.closeModal {
+    position: absolute;
+    right: 18px;
+    top: 15px;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .booking-history {
+        padding: 20px;
+    }
+
+    .booking-history-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .booking-history-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .booking-history-heading h2 {
+        font-size: 21px;
+    }
+
+    .tracking-controls {
+        flex-direction: column;
+    }
+
+    .tracking-controls button {
+        width: 100%;
+    }
+
+}
+.customer-order-details {
+    margin-top: 18px;
+    padding: 15px;
+    background: #fff7f2;
+    border-radius: 10px;
+}
+
+.customer-order-details h3 {
+    margin-bottom: 10px;
+    color: #ff6b35;
+}
+
+.customer-order-details p {
+    margin: 7px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.no-order-message {
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.no-order-message h3 {
+    margin-bottom: 10px;
+}
+
+.no-order-message a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ff6b35;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}

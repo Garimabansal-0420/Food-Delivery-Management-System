@@ -1,119 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>FoodieHub - Order Tracking</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="../CSS/order-tracking.css">
-
+    <script src="../JAVASCRIPT/order-tracking.js" defer></script>
 </head>
 
 <body>
 
-
-    <!-- =====================================================
-         FOODIEHUB HEADER
-    ====================================================== -->
+    <!-- HEADER -->
 
     <header class="navbar">
-
         <div class="foodie-nav-container">
 
             <a href="homepage.html" class="foodie-logo">
                 Foodie<span>Hub</span>
             </a>
 
-
             <nav class="nav-links">
-
                 <a href="homepage.html">Home</a>
-
                 <a href="restaurants.html">Restaurants</a>
-
                 <a href="menu.html">Menu</a>
-
                 <a href="fooddetails.html">Food Details</a>
-
                 <a href="booking.html">Table Booking</a>
-
-                <a href="tracking.html" class="active">
-                    Tracking
-                </a>
-
-                <a href="Wishlist.html">Wishlist</a>
-
+                <a href="tracking.html" class="active">Tracking</a>
+                <a href="wishlist.html">Wishlist</a>
             </nav>
 
-
             <div class="nav-actions">
-
-                <a href="login.html" class="login-btn">
-                    Login
-                </a>
-
-                <a href="registration.html" class="signup-btn">
-                    Sign Up
-                </a>
-
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="registration.html" class="signup-btn">Sign Up</a>
             </div>
 
         </div>
-
     </header>
 
 
-
-    <!-- =====================================================
-         ORDER TRACKING PAGE
-    ====================================================== -->
+    <!-- MAIN CONTENT -->
 
     <main class="container">
 
+        <!-- FLOATING STICKERS -->
 
-        <!-- Floating Food Stickers -->
-
-        <div class="floating-sticker sticker-1">
-            🍔
-        </div>
-
-        <div class="floating-sticker sticker-2">
-            🍟
-        </div>
-
-        <div class="floating-sticker sticker-3">
-            ❤️
-        </div>
-
-        <div class="floating-sticker sticker-4">
-            ✨
-        </div>
+        <div class="floating-sticker sticker-1">🍔</div>
+        <div class="floating-sticker sticker-2">🍟</div>
+        <div class="floating-sticker sticker-3">❤️</div>
+        <div class="floating-sticker sticker-4">✨</div>
 
 
-        <!-- =================================================
-             HERO SECTION
-        ================================================== -->
+        <!-- HERO SECTION -->
 
         <section class="hero-section">
 
             <div class="hero-image-wrapper">
 
                 <img
-                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85"
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58bd?auto=format&fit=crop&w=1200&q=85"
                     alt="Delicious Burger"
-                    class="hero-image"
-                >
+                    class="hero-image">
 
                 <div class="image-overlay"></div>
-
 
                 <div class="hero-content">
 
@@ -139,13 +94,9 @@
         </section>
 
 
-
-        <!-- =================================================
-             ORDER INFO
-        ================================================== -->
+        <!-- ORDER INFO -->
 
         <section class="order-info-card">
-
 
             <div class="restaurant-info">
 
@@ -154,7 +105,6 @@
                 </div>
 
                 <div>
-
                     <h2>Burger House</h2>
 
                     <p>
@@ -165,39 +115,26 @@
                         <span>•</span>
                         Fast Delivery
                     </p>
-
                 </div>
 
             </div>
 
-
             <div class="order-number">
-
                 <span>ORDER ID</span>
-
-                <strong>
-                    #FD10245
-                </strong>
-
+                <strong>#FD10245</strong>
             </div>
 
         </section>
 
 
-
-        <!-- =================================================
-             CURRENT STATUS
-        ================================================== -->
+        <!-- CURRENT STATUS -->
 
         <section class="status-card">
 
             <div class="status-top">
 
                 <div>
-
-                    <span class="status-label">
-                        CURRENT STATUS
-                    </span>
+                    <span class="status-label">CURRENT STATUS</span>
 
                     <h2>
                         <i class="fa-solid fa-fire"></i>
@@ -207,80 +144,53 @@
                     <p>
                         The chef is preparing your delicious meal.
                     </p>
-
                 </div>
-
 
                 <div class="status-animation">
 
-                    <div class="chef-circle">
-                        👨‍🍳
-                    </div>
+                    <div class="chef-circle">👨‍🍳</div>
 
-                    <span class="steam steam-1">
-                        ♨
-                    </span>
-
-                    <span class="steam steam-2">
-                        ♨
-                    </span>
+                    <span class="steam steam-1">♨</span>
+                    <span class="steam steam-2">♨</span>
 
                 </div>
 
             </div>
 
-
             <div class="progress-wrapper">
 
                 <div class="progress-bar">
-
                     <div class="progress-fill"></div>
-
                 </div>
 
                 <div class="progress-icons">
 
                     <div class="progress-item completed">
-
                         <div class="progress-icon">
                             <i class="fa-solid fa-check"></i>
                         </div>
-
                         <span>Confirmed</span>
-
                     </div>
 
-
                     <div class="progress-item active">
-
                         <div class="progress-icon">
                             <i class="fa-solid fa-fire"></i>
                         </div>
-
                         <span>Preparing</span>
-
                     </div>
 
-
                     <div class="progress-item">
-
                         <div class="progress-icon">
                             <i class="fa-solid fa-motorcycle"></i>
                         </div>
-
                         <span>On The Way</span>
-
                     </div>
 
-
                     <div class="progress-item">
-
                         <div class="progress-icon">
                             <i class="fa-solid fa-house"></i>
                         </div>
-
                         <span>Delivered</span>
-
                     </div>
 
                 </div>
@@ -290,162 +200,85 @@
         </section>
 
 
-
-        <!-- =================================================
-             MAIN TRACKING GRID
-        ================================================== -->
+        <!-- TRACKING GRID -->
 
         <section class="tracking-grid">
 
-
-            <!-- LEFT - TIMELINE -->
+            <!-- LEFT TIMELINE -->
 
             <div class="timeline-card">
 
                 <div class="card-heading">
 
                     <div>
-
-                        <span class="small-title">
-                            ORDER PROGRESS
-                        </span>
-
-                        <h2>
-                            Track Your Order
-                        </h2>
-
+                        <span class="small-title">ORDER PROGRESS</span>
+                        <h2>Track Your Order</h2>
                     </div>
 
-                    <span class="live-dot">
-                        LIVE
-                    </span>
+                    <span class="live-dot">LIVE</span>
 
                 </div>
 
-
                 <div class="timeline">
-
-
-                    <!-- Confirmed -->
 
                     <div class="timeline-item completed">
 
                         <div class="timeline-icon">
-
                             <i class="fa-solid fa-check"></i>
-
                         </div>
 
                         <div class="timeline-line"></div>
 
                         <div class="timeline-content">
-
-                            <h3>
-                                Order Confirmed
-                            </h3>
-
-                            <p>
-                                Restaurant has accepted your order.
-                            </p>
-
-                            <span>
-                                12:10 PM
-                            </span>
-
+                            <h3>Order Confirmed</h3>
+                            <p>Restaurant has accepted your order.</p>
+                            <span>12:10 PM</span>
                         </div>
 
                     </div>
-
-
-
-                    <!-- Preparing -->
 
                     <div class="timeline-item active">
 
                         <div class="timeline-icon">
-
                             <i class="fa-solid fa-fire"></i>
-
                         </div>
 
                         <div class="timeline-line"></div>
 
                         <div class="timeline-content">
-
-                            <h3>
-                                Preparing Food
-                            </h3>
-
-                            <p>
-                                Your food is being freshly prepared.
-                            </p>
-
-                            <span>
-                                12:15 PM
-                            </span>
-
+                            <h3>Preparing Food</h3>
+                            <p>Your food is being freshly prepared.</p>
+                            <span>12:15 PM</span>
                         </div>
 
                     </div>
-
-
-
-                    <!-- Delivery -->
 
                     <div class="timeline-item">
 
                         <div class="timeline-icon">
-
                             <i class="fa-solid fa-motorcycle"></i>
-
                         </div>
 
                         <div class="timeline-line"></div>
 
                         <div class="timeline-content">
-
-                            <h3>
-                                Out for Delivery
-                            </h3>
-
-                            <p>
-                                Your delivery partner will pick it up soon.
-                            </p>
-
-                            <span>
-                                12:30 PM
-                            </span>
-
+                            <h3>Out for Delivery</h3>
+                            <p>Your delivery partner will pick it up soon.</p>
+                            <span>12:30 PM</span>
                         </div>
 
                     </div>
 
-
-
-                    <!-- Delivered -->
-
                     <div class="timeline-item last">
 
                         <div class="timeline-icon">
-
                             <i class="fa-solid fa-house"></i>
-
                         </div>
 
                         <div class="timeline-content">
-
-                            <h3>
-                                Delivered
-                            </h3>
-
-                            <p>
-                                Enjoy your delicious meal!
-                            </p>
-
-                            <span>
-                                Soon
-                            </span>
-
+                            <h3>Delivered</h3>
+                            <p>Enjoy your delicious meal!</p>
+                            <span>Soon</span>
                         </div>
 
                     </div>
@@ -455,40 +288,25 @@
             </div>
 
 
-
-            <!-- RIGHT SIDE -->
+            <!-- RIGHT COLUMN -->
 
             <div class="right-column">
 
-
-                <!-- ETA CARD -->
+                <!-- ETA -->
 
                 <div class="eta-card">
 
                     <div class="eta-icon">
-
                         <i class="fa-solid fa-clock"></i>
-
                     </div>
 
                     <div>
-
-                        <span>
-                            ESTIMATED DELIVERY
-                        </span>
-
-                        <h2>
-                            25–30 min
-                        </h2>
-
-                        <p>
-                            Around 12:40 PM
-                        </p>
-
+                        <span>ESTIMATED DELIVERY</span>
+                        <h2>25–30 min</h2>
+                        <p>Around 12:40 PM</p>
                     </div>
 
                 </div>
-
 
 
                 <!-- DELIVERY PARTNER -->
@@ -498,54 +316,36 @@
                     <div class="card-heading">
 
                         <div>
-
                             <span class="small-title">
                                 YOUR DELIVERY PARTNER
                             </span>
-
-                            <h2>
-                                On The Way
-                            </h2>
-
+                            <h2>On The Way</h2>
                         </div>
 
                         <i class="fa-solid fa-motorcycle delivery-bike"></i>
 
                     </div>
 
-
                     <div class="partner-info">
 
-                        <div class="partner-avatar">
-                            👨🏻
-                        </div>
+                        <div class="partner-avatar">👨🏻</div>
 
                         <div class="partner-details">
-
-                            <h3>
-                                Rohit Kumar
-                            </h3>
+                            <h3>Rohit Kumar</h3>
 
                             <p>
                                 <i class="fa-solid fa-star"></i>
                                 4.8
-                                <span>
-                                    (150+ ratings)
-                                </span>
+                                <span>(150+ ratings)</span>
                             </p>
-
                         </div>
 
-                        <button
-                            class="call-button"
-                            onclick="callDeliveryPartner()">
-
+                        <button type="button" class="call-button"
+                            id="callPartner">
                             <i class="fa-solid fa-phone"></i>
-
                         </button>
 
                     </div>
-
 
                     <div class="delivery-message">
 
@@ -561,99 +361,60 @@
                 </div>
 
 
-
                 <!-- ORDER SUMMARY -->
 
                 <div class="summary-card">
 
                     <div class="card-heading">
-
                         <div>
-
-                            <span class="small-title">
-                                ORDER SUMMARY
-                            </span>
-
-                            <h2>
-                                Your Food
-                            </h2>
-
+                            <span class="small-title">ORDER SUMMARY</span>
+                            <h2>Your Food</h2>
                         </div>
-
                     </div>
-
 
                     <div class="food-item">
 
                         <div class="food-image">
-
                             <img
                                 src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=300&q=80"
-                                alt="Classic Burger"
-                            >
-
+                                alt="Classic Burger">
                         </div>
 
                         <div class="food-info">
-
-                            <h3>
-                                Classic Cheese Burger
-                            </h3>
-
-                            <p>
-                                1 × ₹249
-                            </p>
-
+                            <h3>Classic Cheese Burger</h3>
+                            <p>1 × ₹249</p>
                         </div>
 
-                        <strong>
-                            ₹249
-                        </strong>
+                        <strong>₹249</strong>
 
                     </div>
-
 
                     <div class="food-item">
 
                         <div class="food-image">
-
                             <img
                                 src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=300&q=80"
-                                alt="French Fries"
-                            >
-
+                                alt="French Fries">
                         </div>
 
                         <div class="food-info">
-
-                            <h3>
-                                Crispy French Fries
-                            </h3>
-
-                            <p>
-                                1 × ₹100
-                            </p>
-
+                            <h3>Crispy French Fries</h3>
+                            <p>1 × ₹100</p>
                         </div>
 
-                        <strong>
-                            ₹100
-                        </strong>
+                        <strong>₹100</strong>
 
                     </div>
-
 
                     <div class="total-row">
-
-                        <span>
-                            Total Amount
-                        </span>
-
-                        <strong>
-                            ₹349
-                        </strong>
-
+                        <span>Total Amount</span>
+                        <strong>₹349</strong>
                     </div>
+
+                    <button type="button" class="order-details-btn"
+                        id="viewOrderDetails">
+                        View Order Details
+                    </button>
 
                 </div>
 
@@ -662,10 +423,35 @@
         </section>
 
 
+        <!-- MY TABLE BOOKINGS -->
 
-        <!-- =================================================
-             BOTTOM MESSAGE
-        ================================================== -->
+        <section class="booking-history">
+
+            <div class="booking-history-heading">
+
+                <div>
+                    <span class="small-title">YOUR RESERVATIONS</span>
+                    <h2>My Table Bookings</h2>
+                    <p>View the table reservations you have made.</p>
+                </div>
+
+                <a href="booking.html" class="new-booking-btn">
+                    <i class="fa-solid fa-plus"></i>
+                    Book a Table
+                </a>
+
+            </div>
+
+            <div id="bookingHistoryList">
+
+                <!-- Booking cards generated by JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- BOTTOM MESSAGE -->
 
         <section class="enjoy-section">
 
@@ -673,13 +459,9 @@
             <div class="confetti confetti-2">✦</div>
             <div class="confetti confetti-3">✦</div>
 
-            <div class="enjoy-icon">
-                🍔
-            </div>
+            <div class="enjoy-icon">🍔</div>
 
-            <h2>
-                Enjoy Your Meal! 😋
-            </h2>
+            <h2>Enjoy Your Meal! 😋</h2>
 
             <p>
                 Great food is almost at your doorstep.
@@ -690,15 +472,11 @@
     </main>
 
 
-
-    <!-- =====================================================
-         FOODIEHUB FOOTER
-    ====================================================== -->
+    <!-- FOOTER -->
 
     <footer class="footer">
 
         <div class="foodie-footer-container">
-
 
             <div class="footer-about">
 
@@ -713,102 +491,43 @@
 
             </div>
 
-
             <div class="footer-links">
 
-                <h3>
-                    Explore
-                </h3>
+                <h3>Explore</h3>
 
-                <a href="restaurants.html">
-                    Restaurants
-                </a>
-
-                <a href="menu.html">
-                    Menu
-                </a>
-
-                <a href="food-details.html">
-                    Food Details
-                </a>
-
-                <a href="wishlist.html">
-                    Wishlist
-                </a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="menu.html">Menu</a>
+                <a href="fooddetails.html">Food Details</a>
+                <a href="wishlist.html">Wishlist</a>
 
             </div>
 
-
             <div class="footer-links">
 
-                <h3>
-                    Services
-                </h3>
+                <h3>Services</h3>
 
-                <a href="table-booking.html">
-                    Table Booking
-                </a>
-
-                <a href="tracking.html">
-                    Order Tracking
-                </a>
-
-                <a href="dashboard.html">
-                    Restaurant Management
-                </a>
+                <a href="booking.html">Table Booking</a>
+                <a href="tracking.html">Order Tracking</a>
 
             </div>
 
-
             <div class="footer-links">
 
-                <h3>
-                    Account
-                </h3>
+                <h3>Account</h3>
 
-                <a href="login.html">
-                    Login
-                </a>
-
-                <a href="register.html">
-                    Sign Up
-                </a>
-
-                <a href="cart.html">
-                    Cart & Checkout
-                </a>
+                <a href="login.html">Login</a>
+                <a href="registration.html">Sign Up</a>
+                <a href="cart.html">Cart & Checkout</a>
 
             </div>
 
         </div>
 
-
         <div class="footer-bottom">
-
-            <p>
-                © 2026 FoodieHub. All Rights Reserved.
-            </p>
-
+            <p>© 2026 FoodieHub. All Rights Reserved.</p>
         </div>
 
     </footer>
 
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
-    <script>
-
-        function callDeliveryPartner() {
-
-            alert("📞 Calling Rohit Kumar...");
-
-        }
-
-    </script>
-
 </body>
-
 </html>

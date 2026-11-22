@@ -120,8 +120,13 @@
     }
 
     .login-btn,
-    .signup-btn {
+    .signup-btn,
+    .cart-btn {
         font-size: 13px;
+    }
+
+    .cart-btn {
+        padding: 7px 11px;
     }
 
     .hero-container {
@@ -149,7 +154,7 @@
         width: 100%;
         background: #fff;
         border-radius: 9px;
-        box-shadow: 0 5px 20px rgba(0,0,0,.06);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, .06);
     }
 
     .search-box button {

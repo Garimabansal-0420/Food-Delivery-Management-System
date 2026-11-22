@@ -3,204 +3,404 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodieHub - Restaurants</title>
+
     <link rel="stylesheet" href="../CSS/restaurents.css">
+    <script src="../JAVASCRIPT/restaurents.js" defer></script>
 </head>
+
 <body>
 
     <header class="navbar">
         <div class="container nav-container">
+
             <a href="../HTML/homepage.html" class="logo">
                 Foodie<span>Hub</span>
             </a>
+
             <nav class="nav-links">
-                <a href="../HTML/homepage.html">
-                    Home
-                </a>
-                <a href="../HTML/restaurants.html" class="active">
-                    Restaurants
-                </a>
-                <a href="../HTML/menu.html">
-                    Menu
-                </a>
-                <a href="../HTML/fooddetails.html">
-                    Food Details
-                </a>
-                <a href="../HTML/booking.html">
-                    Table Booking
-                </a>
-                <a href="../HTML/tracking.html">
-                    Tracking
-                </a>
-                <a href="../HTML/Wishlist.html">
-                    Wishlist
+                <a href="../HTML/homepage.html">Home</a>
+                <a href="../HTML/restaurants.html" class="active">Restaurants</a>
+                <a href="../HTML/menu.html">Menu</a>
+                <a href="../HTML/fooddetails.html">Food Details</a>
+                <a href="../HTML/booking.html">Table Booking</a>
+                <a href="../HTML/tracking.html">Tracking</a>
+                <a href="../HTML/wishlist.html">
+                    Wishlist <span id="wishlistCount">0</span>
                 </a>
             </nav>
 
             <div class="nav-actions">
-                <a href="../HTML/login.html" class="login-btn">
-                    Login
-                </a>
-                <a href="../HTML/registration.html" class="signup-btn">
-                    Sign Up
-                </a>
+                <a href="../HTML/login.html" class="login-btn">Login</a>
+                <a href="../HTML/registration.html" class="signup-btn">Sign Up</a>
             </div>
+
         </div>
     </header>
-    <main>
-        <div class="heading">
-        <h1>Explore Our Restaurants</h1>
-            <p>
-                Discover delicious food from our favourite restaurants.
-            </p>
 
+
+    <main>
+
+        <section class="heading">
+            <h1>Explore Our Restaurants</h1>
+            <p>Discover delicious food from our favourite restaurants.</p>
+        </section>
+
+
+        <!-- SEARCH AND FILTER SECTION -->
+
+        <section class="filter-section container" aria-label="Find restaurants">
+
+            <div class="search-box">
+                <label for="searchInput">Search restaurants</label>
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search by restaurant name..."
+                >
+            </div>
+
+            <div class="filter-control">
+                <label for="cuisineFilter">Cuisine</label>
+                <select id="cuisineFilter">
+                    <option value="all">All cuisines</option>
+                    <option value="north indian">North Indian</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="fast food">Fast Food</option>
+                    <option value="snacks">Snacks</option>
+                    <option value="indian">Indian</option>
+                    <option value="mughlai">Mughlai</option>
+                    <option value="pizza">Pizza</option>
+                    <option value="italian">Italian</option>
+                    <option value="south indian">South Indian</option>
+                    <option value="asian">Asian</option>
+                    <option value="punjabi">Punjabi</option>
+                    <option value="tandoori">Tandoori</option>
+                    <option value="burgers">Burgers</option>
+                    <option value="beverages">Beverages</option>
+                    <option value="biryani">Biryani</option>
+                </select>
+            </div>
+
+            <div class="filter-control">
+                <label for="ratingFilter">Minimum rating</label>
+                <select id="ratingFilter">
+                    <option value="0">Any rating</option>
+                    <option value="4.0">4.0 and above</option>
+                    <option value="4.3">4.3 and above</option>
+                    <option value="4.5">4.5 and above</option>
+                    <option value="4.7">4.7 and above</option>
+                </select>
+            </div>
+
+            <div class="filter-control">
+                <label for="timeFilter">Delivery time</label>
+                <select id="timeFilter">
+                    <option value="60">Any time</option>
+                    <option value="20">20 minutes or less</option>
+                    <option value="25">25 minutes or less</option>
+                    <option value="30">30 minutes or less</option>
+                    <option value="35">35 minutes or less</option>
+                </select>
+            </div>
+
+            <div class="filter-control">
+                <label for="sortFilter">Sort by</label>
+                <select id="sortFilter">
+                    <option value="default">Recommended</option>
+                    <option value="rating">Highest rating</option>
+                    <option value="time">Fastest delivery</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+
+            <button type="button" id="clearFilters" class="clear-btn">
+                Clear filters
+            </button>
+
+        </section>
+
+
+        <div class="results-row container">
+            <p id="resultCount" aria-live="polite">
+                Showing restaurants
+            </p>
         </div>
-        <div class="restaurantcontainer">
-            <div class="restaurant-card">
-                <img src="../Images/rest1.png" class="image">
+
+
+        <!-- RESTAURANT CARDS -->
+
+        <section
+            class="restaurantcontainer"
+            id="restaurantContainer"
+            aria-label="Restaurants"
+        >
+
+            <article class="restaurant-card"
+                data-rating="4.5"
+                data-time="30"
+                data-cuisine="north indian chinese">
+
+                <img src="../Images/rest1.png" class="image" alt="Spice Villa restaurant">
+
                 <h2>Spice Villa</h2>
                 <p>North Indian • Chinese</p>
-                <p> &#11088; 4.5 • 30 min</p>
+                <p>⭐ 4.5 • 30 min</p>
 
-            </div>
-            <div class="restaurant-card">
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Spice Villa to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-                <img src="../Images/rest2.png" class="image">
-                    
-                
+
+            <article class="restaurant-card"
+                data-rating="4.3"
+                data-time="25"
+                data-cuisine="fast food snacks">
+
+                <img src="../Images/rest2.png" class="image" alt="Food Corner restaurant">
 
                 <h2>Food Corner</h2>
-
                 <p>Fast Food • Snacks</p>
+                <p>⭐ 4.3 • 25 min</p>
 
-                <p> &#11088; 4.3 • 25 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Food Corner to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                <img src="../Images/rest3.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.6"
+                data-time="35"
+                data-cuisine="indian mughlai">
+
+                <img src="../Images/rest3.png" class="image" alt="Royal Taste restaurant">
 
                 <h2>Royal Taste</h2>
-
                 <p>Indian • Mughlai</p>
+                <p>⭐ 4.6 • 35 min</p>
 
-                <p>&#11088; 4.6 • 35 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Royal Taste to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                <img src="../Images/rest4.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.4"
+                data-time="25"
+                data-cuisine="pizza italian">
+
+                <img src="../Images/rest4.png" class="image" alt="Pizza Point restaurant">
 
                 <h2>Pizza Point</h2>
-
                 <p>Pizza • Italian</p>
+                <p>⭐ 4.4 • 25 min</p>
 
-                <p>&#11088; 4.4 • 25 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Pizza Point to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                <img src="../Images/rest5.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.5"
+                data-time="20"
+                data-cuisine="south indian">
+
+                <img src="../Images/rest5.png" class="image" alt="South Spice restaurant">
 
                 <h2>South Spice</h2>
-
                 <p>South Indian</p>
+                <p>⭐ 4.5 • 20 min</p>
 
-                <p> &#11088; 4.5 • 20 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add South Spice to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                <img src="../Images/rest6.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.2"
+                data-time="30"
+                data-cuisine="chinese asian">
+
+                <img src="../Images/rest6.png" class="image" alt="Chinese Bowl restaurant">
 
                 <h2>Chinese Bowl</h2>
-
                 <p>Chinese • Asian</p>
+                <p>⭐ 4.2 • 30 min</p>
 
-                <p>&#11088; 4.2 • 30 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Chinese Bowl to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                 <img src="../Images/rest7.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.4"
+                data-time="25"
+                data-cuisine="indian fast food">
+
+                <img src="../Images/rest7.png" class="image" alt="The Food House restaurant">
 
                 <h2>The Food House</h2>
-
                 <p>Indian • Fast Food</p>
+                <p>⭐ 4.4 • 25 min</p>
 
-                <p> &#11088; 4.4 • 25 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add The Food House to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                <img src="../Images/rest8.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.7"
+                data-time="35"
+                data-cuisine="north indian punjabi">
+
+                <img src="../Images/rest8.png" class="image" alt="Desi Zaika restaurant">
 
                 <h2>Desi Zaika</h2>
-
                 <p>North Indian • Punjabi</p>
+                <p>⭐ 4.7 • 35 min</p>
 
-                <p> &#11088; 4.7 • 35 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Desi Zaika to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                <img src="../Images/rest9.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.5"
+                data-time="30"
+                data-cuisine="mughlai tandoori">
+
+                <img src="../Images/rest9.png" class="image" alt="Tandoori Nights restaurant">
 
                 <h2>Tandoori Nights</h2>
-
                 <p>Mughlai • Tandoori</p>
+                <p>⭐ 4.5 • 30 min</p>
 
-                <p>&#11088; 4.5 • 30 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Tandoori Nights to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                <img src="../Images/rest10.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.3"
+                data-time="20"
+                data-cuisine="burgers beverages">
+
+                <img src="../Images/rest10.png" class="image" alt="Urban Cafe restaurant">
 
                 <h2>Urban Cafe</h2>
-
                 <p>Burgers • Beverages</p>
+                <p>⭐ 4.3 • 20 min</p>
 
-                <p> &#11088; 4.3 • 20 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Urban Cafe to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                <img src="../Images/rest11.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.6"
+                data-time="40"
+                data-cuisine="north indian biryani">
+
+                <img src="../Images/rest11.png" class="image" alt="Delhi Darbar restaurant">
 
                 <h2>Delhi Darbar</h2>
-
                 <p>North Indian • Biryani</p>
+                <p>⭐ 4.6 • 40 min</p>
 
-                <p> &#11088; 4.6 • 40 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Delhi Darbar to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
-            <div class="restaurant-card">
 
-                <img src="../Images/rest12.png" class="image">
+            <article class="restaurant-card"
+                data-rating="4.4"
+                data-time="25"
+                data-cuisine="fast food chinese">
+
+                <img src="../Images/rest12.png" class="image" alt="Hungry Hub restaurant">
 
                 <h2>Hungry Hub</h2>
-
                 <p>Fast Food • Chinese</p>
+                <p>⭐ 4.4 • 25 min</p>
 
-                <p>&#11088;  4.4 • 25 min</p>
+                <div class="card-actions">
+                    <button type="button" class="visit">Visit Restaurant</button>
+                    <button type="button" class="wishlist-btn"
+                        aria-label="Add Hungry Hub to wishlist"
+                        aria-pressed="false">♡</button>
+                </div>
+            </article>
 
-            </div>
+        </section>
 
 
+        <p id="noResults" class="no-results" hidden>
+            No restaurants found. Try changing your search or filters.
+        </p>
+
+        <div class="load-more-wrap">
+            <button type="button" id="loadMoreBtn" class="load-more-btn">
+                Load More
+            </button>
         </div>
 
     </main>
+
+
+    <!-- FOOTER -->
+
     <footer class="footer">
+
         <div class="container footer-container">
 
-
             <div class="footer-about">
-
-                <a href="../index.html" class="logo">
+                <a href="../HTML/homepage.html" class="logo">
                     Foodie<span>Hub</span>
                 </a>
 
@@ -208,75 +408,36 @@
                     Your simple destination for discovering delicious food
                     and restaurants.
                 </p>
-
             </div>
-            <div class="footer-links">
 
+            <div class="footer-links">
                 <h3>Explore</h3>
-
-                <a href="../HTML/resturantlisting.html">
-                    Restaurants
-                </a>
-
-                <a href="../HTML/menu.html">
-                    Menu
-                </a>
-
-                <a href="../HTML/fooddetails.html">
-                    Food Details
-                </a>
-
-                <a href="../HTML/wishlist.html">
-                    Wishlist
-                </a>
-
+                <a href="../HTML/restaurants.html">Restaurants</a>
+                <a href="../HTML/menu.html">Menu</a>
+                <a href="../HTML/fooddetails.html">Food Details</a>
+                <a href="../HTML/wishlist.html">Wishlist</a>
             </div>
-            <div class="footer-links">
 
+            <div class="footer-links">
                 <h3>Services</h3>
-
-                <a href="../HTML/table-booking.html">
-                    Table Booking
-                </a>
-
-                <a href="../HTML/tracking.html">
-                    Order Tracking
-                </a>
-
-                
-
+                <a href="../HTML/booking.html">Table Booking</a>
+                <a href="../HTML/tracking.html">Order Tracking</a>
             </div>
+
             <div class="footer-links">
-
                 <h3>Account</h3>
-
-                <a href="../HTML/login.html">
-                    Login
-                </a>
-
-                <a href="../HTML/register.html">
-                    Sign Up
-                </a>
-
-                <a href="../HTML/cart.html">
-                    Cart & Checkout
-                </a>
-
+                <a href="../HTML/login.html">Login</a>
+                <a href="../HTML/registration.html">Sign Up</a>
+                <a href="../HTML/cart.html">Cart &amp; Checkout</a>
             </div>
-
 
         </div>
+
         <div class="footer-bottom">
-
-            <p>
-                © 2026 FoodieHub. All Rights Reserved.
-            </p>
-
+            <p>© 2026 FoodieHub. All Rights Reserved.</p>
         </div>
 
     </footer>
 
-
 </body>
-
 </html>

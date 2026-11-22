@@ -309,4 +309,229 @@
     color: #fff !important;
     padding: 9px 14px;
     border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.active-cart .cart-badge {
+    background: #fff;
+    color: #ff6b35;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    line-height: 1;
+}
+
+/* Empty Cart View */
+.empty-cart-state {
+    background: #fff;
+    border: 1px dashed #ffd5c4;
+    border-radius: 16px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.empty-cart-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.empty-cart-state h3 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.empty-cart-state p {
+    color: #777;
+    font-size: 14px;
+    max-width: 420px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+}
+
+.empty-cart-btn {
+    display: inline-block;
+    background: #ff6b35;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.empty-cart-btn:hover {
+    background: #e85a28;
+}
+
+/* Disabled Checkout Button */
+.checkout-btn.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+}
+
+/* Demo Checkout Modal */
+.checkout-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+}
+
+.checkout-modal-backdrop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.checkout-modal {
+    background: #fff;
+    border-radius: 16px;
+    padding: 35px 30px;
+    max-width: 460px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    transform: scale(0.92);
+    transition: transform .3s ease;
+}
+
+.checkout-modal-backdrop.show .checkout-modal {
+    transform: scale(1);
+}
+
+.checkout-modal-icon {
+    font-size: 46px;
+    margin-bottom: 12px;
+}
+
+.checkout-modal h2 {
+    font-size: 23px;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+.checkout-modal p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.checkout-modal-summary {
+    background: #fffaf7;
+    border: 1px solid #ffe1d3;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 14px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.checkout-modal-summary div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    color: #555;
+}
+
+.checkout-modal-summary div:last-child {
+    margin-bottom: 0;
+    padding-top: 9px;
+    border-top: 1px dashed #ffd5c4;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ff6b35;
+}
+
+.checkout-modal-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.checkout-modal-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.checkout-modal-primary {
+    background: #ff6b35;
+    color: #fff;
+}
+
+.checkout-modal-primary:hover {
+    background: #e85a28;
+}
+
+.checkout-modal-secondary {
+    background: #f1f1f1;
+    color: #444;
+}
+
+.checkout-modal-secondary:hover {
+    background: #e4e4e4;
+}
+
+
+
+/* Delivery details form inside checkout modal */
+
+.delivery-form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.delivery-form-fields input,
+.delivery-form-fields textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.delivery-form-fields input:focus,
+.delivery-form-fields textarea:focus {
+    border-color: #ff6b35;
+}
+
+.delivery-form-fields textarea {
+    resize: vertical;
+}
+
+.checkout-demo-note {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 16px;
 }

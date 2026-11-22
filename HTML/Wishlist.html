@@ -1,20 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorite Restaurants</title>
+    <title>FoodieHub | Wishlist</title>
 
-
-<link rel="stylesheet" href="../CSS/Wishlist.css">
-
+    <link rel="stylesheet" href="../CSS/Wishlist.css">
 </head>
 
 <body>
 
+    <!-- FOODIEHUB NAVBAR -->
 
     <header class="navbar">
+
         <div class="container nav-container">
 
             <a href="homepage.html" class="logo">
@@ -22,25 +23,40 @@
             </a>
 
             <nav class="nav-links">
-                <a href="../HTML/homepage.html">Home</a>
-                <a href="../HTML/restaurants.html">Restaurants</a>
-                <a href="../HTML/menu.html">Menu</a>
-                <a href="../HTML/fooddetails.html">Food Details</a>
-                <a href="../HTML/booking.html">Table Booking</a>
-                <a href="../HTML/tracking.html">Tracking</a>
-                <a href="../HTML/Wishlist.html" class="active">Wishlist</a>
+
+                <a href="homepage.html">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="menu.html">Menu</a>
+                <a href="fooddetails.html">Food Details</a>
+                <a href="booking.html">Table Booking</a>
+                <a href="tracking.html">Tracking</a>
+                <a href="wishlist.html" class="active">Wishlist</a>
+
             </nav>
 
             <div class="nav-actions">
-                <a href="../HTML/login.html" class="login-btn">Login</a>
-                <a href="../HTML/registration.html" class="signup-btn">Sign Up</a>
+
+                <a href="cart.html" class="cart-btn">
+                    🛒 Cart
+                    <span class="cart-badge" id="cart-counter">0</span>
+                </a>
+
+                <a href="login.html" class="login-btn">
+                    Login
+                </a>
+
+                <a href="registration.html" class="signup-btn">
+                    Sign Up
+                </a>
+
             </div>
 
         </div>
+
     </header>
 
 
-
+    <!-- MAIN CONTENT -->
 
     <main>
 
@@ -49,42 +65,43 @@
             <div class="favorites-container">
 
                 <!-- TITLE -->
+
                 <h1>
-                    Favorite Restaurants
+                    Favourite Restaurants
                 </h1>
 
 
-                
+                <!-- SORT -->
 
                 <div class="sort-container">
 
                     <select class="sort-select">
 
-                        <option selected>
+                        <option value="" selected disabled>
                             Sort By
                         </option>
 
-                        <option>
+                        <option value="Rating: High to Low">
                             Rating: High to Low
                         </option>
 
-                        <option>
+                        <option value="Rating: Low to High">
                             Rating: Low to High
                         </option>
 
-                        <option>
+                        <option value="Name: A to Z">
                             Name: A to Z
                         </option>
 
-                        <option>
+                        <option value="Name: Z to A">
                             Name: Z to A
                         </option>
 
-                        <option>
+                        <option value="Price: Low to High">
                             Price: Low to High
                         </option>
 
-                        <option>
+                        <option value="Price: High to Low">
                             Price: High to Low
                         </option>
 
@@ -93,144 +110,12 @@
                 </div>
 
 
-               
+                <!-- DYNAMIC WISHLIST CONTAINER -->
 
-                <div class="restaurant-grid">
+                <div class="restaurant-grid" id="wishlist-container">
 
-
-                    
-
-                    <div class="restaurant-card">
-
-                        <div class="restaurant-image">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80"
-                                alt="Burger Singh"
-                            >
-
-                            <div class="price-overlay">
-                                ITEMS AT ₹46
-                            </div>
-
-                        </div>
-
-
-                        <div class="restaurant-info">
-
-                            <h2>
-                                Burger Singh(Big Punjabi...
-                            </h2>
-
-
-                            <div class="rating">
-
-                                <span class="star">
-                                    ★
-                                </span>
-
-                                <span>
-                                    4.3
-                                </span>
-
-                            </div>
-
-
-                            <p>
-                                Burgers, Snacks, Desserts, Beverages...
-                            </p>
-
-                            <p>
-                                Civil Lines
-                            </p>
-
-
-                            <!-- BUTTONS -->
-
-                            <div class="restaurant-buttons">
-
-                                <button class="order-btn">
-                                    Order Now
-                                </button>
-
-                                <button class="remove-btn">
-                                    Remove
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- ============================= -->
-                    <!-- MCDONALD'S -->
-                    <!-- ============================= -->
-
-                    <div class="restaurant-card">
-
-                        <div class="restaurant-image">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=80"
-                                alt="McDonald's"
-                            >
-
-                            <div class="price-overlay">
-                                ITEMS AT ₹51
-                            </div>
-
-                        </div>
-
-
-                        <div class="restaurant-info">
-
-                            <h2>
-                                McDonald's
-                            </h2>
-
-
-                            <div class="rating">
-
-                                <span class="star">
-                                    ★
-                                </span>
-
-                                <span>
-                                    4.4
-                                </span>
-
-                            </div>
-
-
-                            <p>
-                                American, Fast Food, Beverages
-                            </p>
-
-                            <p>
-                                Civil Lines
-                            </p>
-
-
-                            <!-- BUTTONS -->
-
-                            <div class="restaurant-buttons">
-
-                                <button class="order-btn">
-                                    Order Now
-                                </button>
-
-                                <button class="remove-btn">
-                                    Remove
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                    <!-- Restaurants will be loaded dynamically
+                         from localStorage using wishlist.js -->
 
                 </div>
 
@@ -241,9 +126,7 @@
     </main>
 
 
-    <!-- ============================= -->
     <!-- FOODIEHUB FOOTER -->
-    <!-- ============================= -->
 
     <footer class="footer">
 
@@ -251,12 +134,13 @@
 
             <div class="footer-about">
 
-                <a href="../index.html" class="logo">
+                <a href="homepage.html" class="logo">
                     Foodie<span>Hub</span>
                 </a>
 
                 <p>
-                    Your simple destination for discovering delicious food and restaurants.
+                    Your simple destination for discovering delicious
+                    food and restaurants.
                 </p>
 
             </div>
@@ -264,67 +148,33 @@
 
             <div class="footer-links">
 
-                <h3>
-                    Explore
-                </h3>
+                <h3>Explore</h3>
 
-                <a href="restaurants.html">
-                    Restaurants
-                </a>
-
-                <a href="menu.html">
-                    Menu
-                </a>
-
-                <a href="food-details.html">
-                    Food Details
-                </a>
-
-                <a href="wishlist.html">
-                    Wishlist
-                </a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="menu.html">Menu</a>
+                <a href="fooddetails.html">Food Details</a>
+                <a href="wishlist.html">Wishlist</a>
 
             </div>
 
 
             <div class="footer-links">
 
-                <h3>
-                    Services
-                </h3>
+                <h3>Services</h3>
 
-                <a href="table-booking.html">
-                    Table Booking
-                </a>
-
-                <a href="tracking.html">
-                    Order Tracking
-                </a>
-
-                <a href="../restaurant/dashboard.html">
-                    Restaurant Management
-                </a>
+                <a href="booking.html">Table Booking</a>
+                <a href="tracking.html">Order Tracking</a>
 
             </div>
 
 
             <div class="footer-links">
 
-                <h3>
-                    Account
-                </h3>
+                <h3>Account</h3>
 
-                <a href="login.html">
-                    Login
-                </a>
-
-                <a href="register.html">
-                    Sign Up
-                </a>
-
-                <a href="cart.html">
-                    Cart & Checkout
-                </a>
+                <a href="login.html">Login</a>
+                <a href="registration.html">Sign Up</a>
+                <a href="cart.html">Cart & Checkout</a>
 
             </div>
 
@@ -342,5 +192,11 @@
     </footer>
 
 
+    <!-- JAVASCRIPT -->
+
+    <script src="../JAVASCRIPT/cart-common.js" defer></script>
+    <script src="../JAVASCRIPT/wishlist.js" defer></script>
+
 </body>
+
 </html>

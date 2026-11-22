@@ -5,51 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dum Safar Biryani</title>
-
 <link rel="stylesheet" href="../CSS/fooddetails.css">
-
-
 </head>
 
 <body>
 
-  
+    <!-- ============================= -->
+    <!-- FOODIEHUB NAVBAR -->
+    <!-- ============================= -->
 
     <header class="navbar">
 
         <div class="container nav-container">
 
-            <a href="../HTML/homepage.html" class="logo">
+            <a href="../index.html" class="logo">
                 Foodie<span>Hub</span>
             </a>
 
             <nav class="nav-links">
 
-                <a href="../HTML/homepage.html">
+                <a href="homepage.html">
                     Home
                 </a>
 
-                <a href="../HTML/restaurants.html">
+                <a href="restaurants.html">
                     Restaurants
                 </a>
 
-                <a href="../HTML/menu.html">
+                <a href="menu.html">
                     Menu
                 </a>
 
-                <a href="../HTML/fooddetails.html" class="active">
+                <a href="fooddetails.html" class="active">
                     Food Details
                 </a>
 
-                <a href="../HTML/booking.html">
+                <a href="booking.html">
                     Table Booking
                 </a>
 
-                <a href="../HTML/tracking.html">
+                <a href="tracking.html">
                     Tracking
                 </a>
 
-                <a href="../HTML/Wishlist.html">
+                <a href="wishlist.html">
                     Wishlist
                 </a>
 
@@ -57,11 +56,11 @@
 
             <div class="nav-actions">
 
-                <a href="../HTML/login.html" class="login-btn">
+                <a href="login.html" class="login-btn">
                     Login
                 </a>
 
-                <a href="../HTML/registration.html" class="signup-btn">
+                <a href="registration.html" class="signup-btn">
                     Sign Up
                 </a>
 
@@ -567,6 +566,7 @@
         <!-- REVIEWS -->
 
         <section class="reviews-section">
+            
 
             <div class="section-heading">
 
@@ -697,6 +697,44 @@
 
             </div>
 
+<!-- WRITE A REVIEW SECTION -->
+
+<div class="write-review">
+
+    <h2>Write a Review</h2>
+    <p>Share your experience with us!</p>
+
+    <form id="reviewForm">
+
+        <input
+            type="text"
+            id="reviewerName"
+            placeholder="Enter your name"
+            required
+        >
+
+        <select id="reviewRating" required>
+            <option value="">Select Rating</option>
+            <option value="5">★★★★★ - Excellent</option>
+            <option value="4">★★★★ - Very Good</option>
+            <option value="3">★★★ - Good</option>
+            <option value="2">★★ - Average</option>
+            <option value="1">★ - Poor</option>
+        </select>
+
+        <textarea
+            id="reviewText"
+            placeholder="Write your review here..."
+            required
+        ></textarea>
+
+        <button type="submit">Post Review</button>
+
+    </form>
+
+</div>
+
+
         </section>
 
     </main>
@@ -712,7 +750,7 @@
 
             <div class="footer-about">
 
-                <a href="../index.html" class="logo">
+                <a href="homepage.html" class="logo">
                     Foodie<span>Hub</span>
                 </a>
 
@@ -738,7 +776,7 @@
                     Menu
                 </a>
 
-                <a href="food-details.html">
+                <a href="fooddetails.html">
                     Food Details
                 </a>
 
@@ -755,7 +793,7 @@
                     Services
                 </h3>
 
-                <a href="table-booking.html">
+                <a href="booking.html">
                     Table Booking
                 </a>
 
@@ -763,9 +801,7 @@
                     Order Tracking
                 </a>
 
-                <a href="../restaurant/dashboard.html">
-                    Restaurant Management
-                </a>
+               
 
             </div>
 
@@ -780,7 +816,7 @@
                     Login
                 </a>
 
-                <a href="register.html">
+                <a href="registration.html">
                     Sign Up
                 </a>
 
@@ -829,5 +865,9 @@
     </div>
 
 
+
+
+<script src="../JAVASCRIPT/cart-common.js" defer></script>
+<script src="../JAVASCRIPT/fooddetails.js" defer></script>
 </body>
 </html>
