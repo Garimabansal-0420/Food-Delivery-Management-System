@@ -530,6 +530,71 @@ input {
 }
 
 
+/* WRITE A REVIEW */
+
+.write-review {
+    margin-top: 50px;
+    padding: 30px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
+
+.write-review h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.write-review > p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+#reviewForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#reviewForm input,
+#reviewForm select,
+#reviewForm textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+}
+
+#reviewForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#reviewForm input:focus,
+#reviewForm select:focus,
+#reviewForm textarea:focus {
+    border-color: #ff6b35;
+}
+
+#reviewForm button {
+    width: 150px;
+    padding: 12px;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#reviewForm button:hover {
+    background: #e85a28;
+}
+
+
+
 /* =========================
    FOODIEHUB FOOTER
 ========================= */
