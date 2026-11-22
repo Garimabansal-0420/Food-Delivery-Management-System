@@ -148,6 +148,41 @@ input {
     background: #e85a28;
 }
 
+.cart-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background: #fff;
+    transition: .3s;
+}
+
+.cart-btn:hover {
+    color: #ff6b35;
+    border-color: #ffd5c4;
+    background: #fffaf7;
+}
+
+.cart-badge {
+    background: #ff6b35;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    line-height: 1;
+}
+
 .hero {
     background: linear-gradient(135deg, #fffaf7, #fff);
     min-height: 570px;
@@ -509,6 +544,16 @@ input {
     font-size: 20px;
     cursor: pointer;
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    transition: transform .2s, background-color .2s, color .2s;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn.active {
+    color: #e85a28;
+    background: #fff0e9;
 }
 
 .food-content {
@@ -545,6 +590,17 @@ input {
     border-radius: 7px;
     font-size: 12px;
     font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s, transform .15s;
+}
+
+.add-btn:hover {
+    background: #e85a28;
+}
+
+.add-btn:active {
+    transform: scale(0.96);
 }
 
 .quick-access {
@@ -704,4 +760,57 @@ input {
 .footer-bottom p {
     color: #999;
     font-size: 13px;
+}
+
+/* Toast Notification */
+.foodiehub-toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #222;
+    color: #fff;
+    padding: 13px 22px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity .3s ease, transform .3s ease;
+    pointer-events: none;
+    border-left: 4px solid #ff6b35;
+}
+
+.foodiehub-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* No Food Found State */
+.no-food-found {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 45px 20px;
+    background: #fffaf7;
+    border: 1px dashed #ffd5c4;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+.no-food-found .no-food-icon {
+    font-size: 38px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.no-food-found h3 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.no-food-found p {
+    color: #777;
+    font-size: 14px;
 }
