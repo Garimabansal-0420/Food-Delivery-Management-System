@@ -566,6 +566,7 @@
         <!-- REVIEWS -->
 
         <section class="reviews-section">
+            
 
             <div class="section-heading">
 
@@ -695,6 +696,44 @@
                 </p>
 
             </div>
+
+<!-- WRITE A REVIEW SECTION -->
+
+<div class="write-review">
+
+    <h2>Write a Review</h2>
+    <p>Share your experience with us!</p>
+
+    <form id="reviewForm">
+
+        <input
+            type="text"
+            id="reviewerName"
+            placeholder="Enter your name"
+            required
+        >
+
+        <select id="reviewRating" required>
+            <option value="">Select Rating</option>
+            <option value="5">★★★★★ - Excellent</option>
+            <option value="4">★★★★ - Very Good</option>
+            <option value="3">★★★ - Good</option>
+            <option value="2">★★ - Average</option>
+            <option value="1">★ - Poor</option>
+        </select>
+
+        <textarea
+            id="reviewText"
+            placeholder="Write your review here..."
+            required
+        ></textarea>
+
+        <button type="submit">Post Review</button>
+
+    </form>
+
+</div>
+
 
         </section>
 
@@ -827,6 +866,6 @@
 
     </div>
 
-
+<script src="../JavaScript/fooddetails.js"></script>
 </body>
 </html>
