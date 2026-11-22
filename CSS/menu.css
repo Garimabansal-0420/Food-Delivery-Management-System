@@ -1,8 +1,10 @@
+
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Trebuchet MS',
                  'Lucida Sans Unicode',
@@ -10,13 +12,16 @@ body {
                  'Lucida Sans',
                  Arial,
                  sans-serif;
-
     color: #333333;
     background-color: #fffaf5;
 }
+
 a {
     text-decoration: none;
 }
+
+/* NAVBAR */
+
 .navbar {
     width: 100%;
     height: 80px;
@@ -28,23 +33,27 @@ a {
     border-bottom: 1px solid #f3d6bf;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
 }
+
 .container {
     width: 92%;
     max-width: 1400px;
     margin: auto;
 }
+
 .nav-container {
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     font-size: 28px;
     font-weight: bold;
     color: #333333;
     white-space: nowrap;
 }
+
 .logo span {
     color: #f97316;
 }
@@ -55,25 +64,25 @@ a {
     justify-content: center;
     gap: 24px;
 }
+
 .nav-links a {
     color: #444444;
     font-size: 15px;
     font-weight: 600;
     transition: color 0.3s ease;
 }
-.nav-links a:hover {
-    color: #f97316;
-}
+
+.nav-links a:hover,
 .nav-links a.active {
     color: #f97316;
 }
+
 .nav-actions {
     display: flex;
-
     align-items: center;
-
     gap: 10px;
 }
+
 .login-btn {
     color: #f97316;
     border: 1px solid #f97316;
@@ -82,9 +91,11 @@ a {
     font-weight: 600;
     transition: 0.3s;
 }
+
 .login-btn:hover {
     background-color: #fff7ed;
 }
+
 .signup-btn {
     color: white;
     background-color: #f97316;
@@ -94,9 +105,27 @@ a {
     font-weight: 600;
     transition: 0.3s;
 }
+
 .signup-btn:hover {
     background-color: #ea580c;
 }
+
+.cart-btn {
+    color: #f97316;
+    border: 1px solid #f97316;
+    padding: 9px 17px;
+    border-radius: 22px;
+    font-weight: 600;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.cart-btn:hover {
+    background-color: #fff7ed;
+}
+
+/* HERO IMAGE */
+
 .homeimage {
     height: 500px;
     width: 100%;
@@ -104,6 +133,9 @@ a {
     margin: auto;
     margin-top: 80px;
 }
+
+/* POPULAR DISHES SECTION */
+
 .heading {
     height: 500px;
     width: 100%;
@@ -112,6 +144,7 @@ a {
     align-items: center;
     background-color: #fff7ed;
 }
+
 .heading h1 {
     margin-top: 50px;
     color: #333333;
@@ -122,15 +155,18 @@ a {
                  Arial,
                  sans-serif;
 }
+
 .heading input {
     display: none;
 }
+
 .categories {
     width: 90%;
     display: flex;
     justify-content: space-evenly;
     margin-top: 40px;
 }
+
 .categories label {
     width: 180px;
     padding: 15px 10px;
@@ -143,71 +179,68 @@ a {
     background-color: white;
     transition: 0.3s;
 }
+
 .categories label:hover {
     color: #f97316;
     border-color: #f97316;
     background-color: #fffaf5;
 }
+
+/* CATEGORY IMAGES */
+
 .food {
     width: 90%;
     display: none;
     gap: 20px;
     margin-top: 40px;
 }
+
 .food img {
     width: 25%;
     height: 220px;
     object-fit: cover;
     border-radius: 15px;
 }
+
 input[type="radio"][id="breakfast"]:checked ~ .breakfast-food {
     display: flex;
 }
+
 input[type="radio"][id="lunch"]:checked ~ .lunch-food {
     display: flex;
 }
+
 input[type="radio"][id="south"]:checked ~ .south-food {
     display: flex;
 }
+
 input[type="radio"][id="chinese"]:checked ~ .chinese-food {
     display: flex;
 }
-input[type="radio"][id="breakfast"]:checked ~ .categories label[for="breakfast"] {
-    background-color: #f97316;
 
-    color: white;
+/* CATEGORY ACTIVE BUTTON */
 
-    border-color: #f97316;
-}
-input[type="radio"][id="lunch"]:checked ~ .categories label[for="lunch"] {
-    background-color: #f97316;
-
-    color: white;
-
-    border-color: #f97316;
-}
-input[type="radio"][id="south"]:checked ~ .categories label[for="south"] {
-    background-color: #f97316;
-
-    color: white;
-
-    border-color: #f97316;
-}
+input[type="radio"][id="breakfast"]:checked ~ .categories label[for="breakfast"],
+input[type="radio"][id="lunch"]:checked ~ .categories label[for="lunch"],
+input[type="radio"][id="south"]:checked ~ .categories label[for="south"],
 input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
     background-color: #f97316;
-
     color: white;
-
     border-color: #f97316;
 }
+
+/* IMAGE HOVER */
+
 .food1 {
-    transition-property: transform;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-in;
+    transition: transform 0.5s ease-in;
 }
+
 .food1:hover {
     transform: scale(1.2);
 }
+
+/* MENU CONTAINER */
+
 .foodcontainer {
     background-color: #fffaf5;
     width: 100%;
@@ -218,17 +251,46 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
     row-gap: 50px;
     margin-bottom: 100px;
 }
+
+/* MENU HEADING AND SEARCH */
+
 .main {
     width: 100%;
-    height: 50px;
+    height: auto;
+    text-align: center;
+    margin-bottom: 10px;
 }
+
 .main h1 {
     text-align: center;
     font-size: 2.5em;
     color: #333333;
 }
-.foodcontainer .card1 {
+
+#searchDish {
     width: 350px;
+    max-width: 90%;
+    padding: 13px 18px;
+    margin: 20px auto;
+    display: block;
+    border: 1px solid #f4b183;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: white;
+    transition: 0.3s;
+}
+
+#searchDish:focus {
+    border-color: #f97316;
+    box-shadow: 0px 0px 5px rgba(249, 115, 22, 0.3);
+}
+
+/* MENU CARDS */
+
+.foodcontainer .card1 {
+    width: 490px;
     height: 400px;
     display: flex;
     flex-direction: column;
@@ -237,9 +299,21 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
     border: 1px solid #f4c7a8;
     box-shadow: 4px 4px 8px #f97316;
     overflow: hidden;
-    transition-property: box-shadow;
-    transition-duration: 1s;
+    transition: box-shadow 1s;
 }
+
+.foodcontainer .card1:hover {
+    box-shadow: 20px 20px 10px #f97316;
+}
+
+/* HIDE CARDS USING JAVASCRIPT */
+
+.foodcontainer .card1[hidden] {
+    display: none !important;
+}
+
+/* CARD TITLE */
+
 .itemname {
     width: 100%;
     height: 45px;
@@ -249,12 +323,15 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
     justify-content: space-evenly;
     flex-shrink: 0;
 }
+
 .itemname h1 {
     color: white;
     text-align: center;
     font-size: 1.6em;
     margin: 0;
 }
+
+/* FOOD ITEMS */
 
 .card1 .item {
     width: 100%;
@@ -268,33 +345,129 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    gap: 5px;
 }
-.foodcontainer .card1:hover {
-    box-shadow: 20px 20px 10px #f97316;
+
+/* KEEP PRICE VISIBLE */
+
+.card1 .item span {
+    white-space: nowrap;
+    flex-shrink: 0;
 }
+
+/* ADD BUTTON */
+
+.add-cart-btn {
+    background-color: #f97316;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: inherit;
+    margin-left: 5px;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+    background-color: #ea580c;
+}
+
+/* REMOVE BUTTON */
+
+.remove-cart-btn {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-family: inherit;
+    margin-left: 5px;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.remove-cart-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* NO SEARCH RESULTS */
+
+.no-dish {
+    width: 100%;
+    text-align: center;
+    color: #f97316;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.no-dish[hidden] {
+    display: none !important;
+}
+
+/* LOAD MORE BUTTON */
+
+.load-more-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.load-more-btn {
+    display: block;
+    margin: 10px auto 40px;
+    padding: 12px 30px;
+    background-color: #f97316;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.load-more-btn:hover {
+    background-color: #ea580c;
+    transform: translateY(-2px);
+}
+
+.load-more-container[hidden],
+.load-more-btn[hidden] {
+    display: none !important;
+}
+
+/* FOOTER */
+
 .footer {
     background-color: #222222;
     color: white;
     padding-top: 55px;
     width: 100%;
 }
+
 .footer-container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
     padding-bottom: 45px;
 }
+
 .footer .logo {
     color: white;
     margin-bottom: 12px;
     display: inline-block;
 }
 
-
 .footer .logo span {
     color: #f97316;
 }
-
 
 .footer-about p {
     color: #aaaaaa;
@@ -303,13 +476,11 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
     line-height: 1.6;
 }
 
-
 .footer-links {
     display: flex;
     flex-direction: column;
     gap: 9px;
 }
-
 
 .footer-links h3 {
     color: white;
@@ -317,18 +488,15 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
     margin-bottom: 8px;
 }
 
-
 .footer-links a {
     color: #aaaaaa;
     font-size: 13px;
     transition: 0.3s;
 }
 
-
 .footer-links a:hover {
     color: #f97316;
 }
-
 
 .footer-bottom {
     border-top: 1px solid #444444;
@@ -336,82 +504,81 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
     padding: 20px;
 }
 
-
 .footer-bottom p {
     color: #999999;
     font-size: 13px;
 }
 
+/* RESPONSIVE DESIGN */
 
-@media (max-width: 1100px) {
-    .nav-links {
-        gap: 12px;
-    }
-    .nav-links a {
-        font-size: 13px;
-    }
-    .logo {
-        font-size: 24px;
-    }
-    .login-btn,
-    .signup-btn {
-        padding: 8px 12px;
-    }
-}
 @media (max-width: 1100px) {
 
     .container {
         width: 94%;
     }
+
     .nav-links {
         gap: 15px;
     }
+
     .nav-links a {
         font-size: 13px;
     }
+
     .logo {
         font-size: 24px;
     }
-    .login-btn,
-    .signup-btn {
-        padding: 8px 13px;
 
+    .login-btn,
+    .signup-btn,
+    .cart-btn {
+        padding: 8px 13px;
         font-size: 13px;
     }
+
     .homeimage {
         height: 430px;
     }
+
     .heading {
         height: auto;
         min-height: 450px;
         padding-bottom: 40px;
     }
+
     .heading h1 {
         font-size: 30px;
     }
+
     .categories {
         width: 92%;
         gap: 15px;
     }
+
     .categories label {
         width: 160px;
         font-size: 18px;
     }
+
     .food {
         width: 92%;
         gap: 15px;
     }
+
     .food img {
         height: 190px;
     }
+
     .foodcontainer {
         gap: 30px;
         row-gap: 40px;
     }
+
     .foodcontainer .card1 {
         width: 310px;
         height: 380px;
     }
+
     .footer-container {
         grid-template-columns: 2fr 1fr 1fr 1fr;
         gap: 25px;
@@ -419,113 +586,131 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
 }
 
 @media (max-width: 900px) {
+
     .nav-container {
         height: 75px;
     }
+
     .navbar {
         height: 75px;
     }
+
     .nav-links {
         gap: 10px;
     }
+
     .nav-links a {
         font-size: 12px;
     }
+
     .nav-actions {
         gap: 6px;
     }
-    .login-btn,
-    .signup-btn {
-        padding: 7px 10px;
 
+    .login-btn,
+    .signup-btn,
+    .cart-btn {
+        padding: 7px 10px;
         font-size: 12px;
     }
+
     .logo {
         font-size: 22px;
     }
+
     .homeimage {
         margin-top: 75px;
-
         height: 350px;
     }
+
     .heading h1 {
         font-size: 28px;
-
         margin-top: 40px;
     }
+
     .categories {
         flex-wrap: wrap;
-
         justify-content: center;
-
         gap: 15px;
     }
+
     .food {
         flex-wrap: wrap;
-
         justify-content: center;
     }
+
     .food img {
         width: 48%;
-
         height: 180px;
     }
+
     .foodcontainer {
         justify-content: center;
         column-gap: 25px;
     }
+
     .foodcontainer .card1 {
         width: 320px;
     }
+
     .footer-container {
         grid-template-columns: 1fr 1fr;
         gap: 35px;
     }
 }
 
-
 @media (max-width: 700px) {
+
     .navbar {
         height: 70px;
     }
+
     .nav-container {
         height: 70px;
     }
+
     .container {
         width: 94%;
     }
+
     .logo {
         font-size: 21px;
     }
+
     .nav-links {
         gap: 7px;
     }
+
     .nav-links a {
         font-size: 11px;
     }
+
     .nav-actions {
         display: none;
     }
+
     .homeimage {
         margin-top: 70px;
         height: 300px;
         object-fit: cover;
     }
+
     .heading {
         min-height: auto;
         padding-bottom: 35px;
     }
+
     .heading h1 {
         font-size: 25px;
-        text-align: center; 
+        text-align: center;
         margin-top: 30px;
     }
+
     .categories {
         width: 95%;
         gap: 10px;
         margin-top: 25px;
     }
-
 
     .categories label {
         width: 140px;
@@ -533,13 +718,11 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
         font-size: 16px;
     }
 
-
     .food {
-        width: 95%; 
+        width: 95%;
         gap: 10px;
         margin-top: 25px;
     }
-
 
     .food img {
         width: 48%;
@@ -547,31 +730,46 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
         border-radius: 12px;
     }
 
-
     .main {
-        height: auto;   
+        height: auto;
         margin-bottom: 25px;
     }
+
     .main h1 {
         font-size: 2em;
     }
+
+    #searchDish {
+        width: 90%;
+    }
+
     .foodcontainer {
         width: 100%;
         gap: 25px;
         row-gap: 30px;
         padding: 0 10px;
     }
+
     .foodcontainer .card1 {
         width: 90%;
         max-width: 350px;
         height: 380px;
     }
+
     .itemname h1 {
         font-size: 1.4em;
     }
+
     .card1 .item {
         font-size: 1.3em;
     }
+
+    .add-cart-btn,
+    .remove-cart-btn {
+        padding: 5px 7px;
+        font-size: 11px;
+    }
+
     .footer {
         padding-top: 40px;
     }
@@ -581,34 +779,42 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
         gap: 25px;
         padding-bottom: 35px;
     }
+
     .footer-about p {
         max-width: 100%;
     }
 }
+
 @media (max-width: 500px) {
+
     .navbar {
         height: 65px;
     }
+
     .nav-container {
         height: 65px;
-
         justify-content: center;
     }
+
     .logo {
         font-size: 24px;
     }
+
     .nav-links {
         display: none;
     }
+
     .homeimage {
         margin-top: 65px;
         height: 230px;
         object-fit: cover;
     }
+
     .heading h1 {
         font-size: 22px;
         margin-top: 25px;
     }
+
     .categories {
         width: 95%;
         display: grid;
@@ -616,95 +822,132 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
         gap: 10px;
         margin-top: 20px;
     }
+
     .categories label {
         width: 100%;
         font-size: 14px;
         padding: 10px 5px;
     }
+
     .food {
         width: 94%;
         display: none;
         gap: 8px;
     }
+
     .food img {
         width: 48%;
         height: 120px;
         border-radius: 10px;
     }
+
     .main {
         margin-bottom: 20px;
     }
+
     .main h1 {
         font-size: 1.7em;
     }
+
+    #searchDish {
+        width: 95%;
+        font-size: 14px;
+    }
+
     .foodcontainer {
         padding: 0 15px;
         row-gap: 25px;
         margin-bottom: 60px;
     }
+
     .foodcontainer .card1 {
         width: 100%;
         max-width: 350px;
         height: 360px;
     }
+
     .itemname {
         height: 42px;
     }
+
     .itemname h1 {
         font-size: 1.25em;
     }
+
     .card1 .item {
         height: 38px;
         font-size: 1.15em;
     }
+
+    .add-cart-btn,
+    .remove-cart-btn {
+        padding: 4px 6px;
+        font-size: 10px;
+        margin-left: 2px;
+    }
+
     .footer-container {
         grid-template-columns: 1fr;
         gap: 25px;
         text-align: center;
     }
+
     .footer-about p {
         margin: auto;
     }
+
     .footer-links {
         align-items: center;
     }
+
     .footer-bottom {
         padding: 15px 10px;
     }
+
     .footer-bottom p {
         font-size: 12px;
     }
+
+    .load-more-btn {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
 }
+
 @media (max-width: 350px) {
+
     .logo {
         font-size: 21px;
     }
+
     .homeimage {
         height: 200px;
     }
+
     .heading h1 {
         font-size: 20px;
     }
+
     .categories {
         grid-template-columns: 1fr;
-
         width: 85%;
     }
+
     .categories label {
         width: 100%;
     }
+
     .food img {
         width: 100%;
         height: 130px;
     }
+
     .foodcontainer .card1 {
         width: 100%;
         height: 340px;
     }
 
-
     .main h1 {
         font-size: 1.5em;
     }
 }
-
