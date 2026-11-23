@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "name": "gaurav",
+      "email": "gauravofficial2512@gmail.com",
+      "phone": "9711041832",
+      "password": "12345678",
+      "id": "z_SjKEYj3ec"
+    },
+    {
+      "name": "rahul",
+      "email": "golagaurav2512@outlook.com",
+      "phone": "7838031522",
+      "password": "12345678",
+      "id": "GniBPAjsi10"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

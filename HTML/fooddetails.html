@@ -56,15 +56,22 @@
 
             <div class="nav-actions">
 
-                <a href="login.html" class="login-btn">
+                <a href="login.html" class="login-btn" id="login-link">
                     Login
                 </a>
 
-                <a href="registration.html" class="signup-btn">
+                <a href="registration.html" class="signup-btn" id="signup-link">
                     Sign Up
                 </a>
 
+                <span id="user-greeting" hidden></span>
+
+                <button type="button" id="logout-btn" hidden>
+                    Logout
+                </button>
+
             </div>
+
 
         </div>
 
@@ -869,5 +876,6 @@
 
 <script src="../JAVASCRIPT/cart-common.js" defer></script>
 <script src="../JAVASCRIPT/fooddetails.js" defer></script>
+<script src="../JAVASCRIPT/auth.js" defer></script>
 </body>
 </html>

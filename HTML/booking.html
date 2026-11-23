@@ -32,11 +32,17 @@
                 <a href="tracking.html">Tracking</a>
                 <a href="wishlist.html">Wishlist</a>
             </nav>
-
             <div class="nav-actions">
-                <a href="login.html" class="login-btn">Login</a>
-                <a href="registration.html" class="signup-btn">Sign Up</a>
+                <a href="login.html" class="login-btn" id="login-link">Login</a>
+                <a href="registration.html" class="signup-btn" id="signup-link">Sign Up</a>
+
+                <span id="user-greeting" hidden></span>
+
+                <button type="button" id="logout-btn" hidden>
+                    Logout
+                </button>
             </div>
+            
 
         </div>
     </header>
@@ -438,6 +444,7 @@
 
     <!-- EXTERNAL JAVASCRIPT -->
     <script src="../JAVASCRIPT/table-booking.js" defer></script>
+    <script src="../JAVASCRIPT/auth.js" defer></script>
 
 </body>
 

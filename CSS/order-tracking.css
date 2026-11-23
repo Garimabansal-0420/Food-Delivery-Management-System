@@ -1913,3 +1913,21 @@ body {
     text-decoration: none;
     border-radius: 8px;
 }
+
+
+
+
+#user-greeting {
+    font-weight: 600;
+    color: inherit;
+}
+
+#logout-btn {
+    padding: 9px 16px;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}

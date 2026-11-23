@@ -1,9 +1,4 @@
 
-/**
- * FoodieHub - Cart & Checkout
- * Saves confirmed orders in localStorage
- * and redirects customers to Order Tracking.
- */
 
 const ORDER_STORAGE_KEY = "foodiehub_orders";
 const CURRENT_ORDER_KEY = "foodiehub_current_order_id";
@@ -308,6 +303,20 @@ function handleCheckout() {
 
     if (!cart.length) {
         showToast("Your cart is empty!");
+        return;
+    }
+
+    // Check whether the user is logged in
+    const loggedInUser = sessionStorage.getItem("loggedInUser");
+
+    if (!loggedInUser) {
+
+        // Remember that the user wants to continue checkout
+        sessionStorage.setItem("foodiehub_return_to_checkout", "true");
+
+        // Redirect to login
+        window.location.href = "login.html";
+
         return;
     }
 

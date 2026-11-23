@@ -15,6 +15,10 @@ let strength = document.getElementById("strength");
 let success = document.getElementById("success");
 
 
+// JSON SERVER API
+const API_URL = "http://localhost:3000/users";
+
+
 // SHOW / HIDE PASSWORD
 
 show.addEventListener("click", function() {
@@ -75,13 +79,12 @@ cpsd.addEventListener("input", function() {
 });
 
 
-// REGISTRATION VALIDATION
+// REGISTRATION VALIDATION AND JSON SERVER
 
-register.addEventListener("click", function() {
+register.addEventListener("click", async function() {
 
     error.textContent = "";
     success.textContent = "";
-
 
     // Check empty fields
 
@@ -107,7 +110,7 @@ register.addEventListener("click", function() {
 
     // Phone number validation
 
-    if (phone.value.length !== 10 || isNaN(phone.value)) {
+    if (!/^\d{10}$/.test(phone.value.trim())) {
 
         error.textContent = "Phone number must contain 10 digits";
         return;
@@ -132,10 +135,92 @@ register.addEventListener("click", function() {
     }
 
 
-    // REGISTRATION SUCCESSFUL
+    // CHECK EXISTING USERS USING GET
 
-    sessionStorage.setItem("registrationSuccess", "true");
+    try {
 
-    window.location.href = "confirmation.html";
+        register.disabled = true;
+        register.textContent = "Please wait...";
+
+        let response = await fetch(API_URL);
+
+        if (!response.ok) {
+            throw new Error("Unable to fetch users");
+        }
+
+        let users = await response.json();
+
+        // Check whether email already exists
+
+        let existingUser = users.find(function(user) {
+
+            return user.email.toLowerCase() ===
+                   email.value.trim().toLowerCase();
+
+        });
+
+
+        if (existingUser) {
+
+            error.textContent = "Email is already registered. Please login.";
+            return;
+        }
+
+
+        // CREATE NEW USER OBJECT
+
+        let newUser = {
+
+            name: name.value.trim(),
+            email: email.value.trim().toLowerCase(),
+            phone: phone.value.trim(),
+            password: psd.value
+
+        };
+
+
+        // SAVE USER USING POST
+
+        let saveResponse = await fetch(API_URL, {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify(newUser)
+
+        });
+
+
+        if (!saveResponse.ok) {
+            throw new Error("Registration failed");
+        }
+
+
+        // REGISTRATION SUCCESSFUL
+
+        success.textContent = "Account created successfully!";
+
+        sessionStorage.setItem("registrationSuccess", "true");
+
+        window.location.href = "confirmation.html";
+
+
+    }
+    catch (err) {
+
+        error.textContent = "Server error. Please try again.";
+
+        console.log(err);
+
+    }
+    finally {
+
+        register.disabled = false;
+        register.textContent = "Register";
+
+    }
 
 });

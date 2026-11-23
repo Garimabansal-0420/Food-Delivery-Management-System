@@ -1022,3 +1022,19 @@ input[type="radio"][id="chinese"]:checked ~ .categories label[for="chinese"] {
         width: 100%;
     }
 }
+
+
+#user-greeting {
+    font-weight: 600;
+    color: inherit;
+}
+
+#logout-btn {
+    padding: 9px 16px;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}

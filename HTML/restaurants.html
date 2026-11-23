@@ -33,8 +33,21 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="../HTML/login.html" class="login-btn">Login</a>
-                <a href="../HTML/registration.html" class="signup-btn">Sign Up</a>
+
+                <a href="../HTML/login.html" class="login-btn" id="login-link">
+                    Login
+                </a>
+
+                <a href="../HTML/registration.html" class="signup-btn" id="signup-link">
+                    Sign Up
+                </a>
+
+                <span id="user-greeting" hidden></span>
+
+                <button type="button" id="logout-btn" hidden>
+                    Logout
+                </button>
+
             </div>
 
         </div>
@@ -438,6 +451,6 @@
         </div>
 
     </footer>
-
+    <script src="../JAVASCRIPT/auth.js" defer></script>
 </body>
 </html>
