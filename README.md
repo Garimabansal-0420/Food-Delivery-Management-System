@@ -1,126 +1,77 @@
-# 🍔 FoodieHub – Food Delivery & Restaurant Management System
+# 🍔 FoodieHub – Food Delivery Management System
 
-<p align="center">
-  A web-based food delivery and restaurant management platform developed as a B.Tech Computer Science project at GLA University, Mathura.
-</p>
+**FoodieHub** is a web-based Food Delivery Management System designed to provide users with a smooth and convenient food ordering experience. It allows users to explore restaurants, browse food menus, view food details, manage their cart and wishlist, book tables, and track their orders through an interactive interface.
 
----
+The project is developed using HTML, CSS, and JavaScript, with JSON Server used for local database functionality.
 
-## 📌 About the Project
+## 🚀 Features
 
-**FoodieHub** is a web-based Food Delivery and Restaurant Management System designed to provide a simple, attractive and user-friendly platform for exploring restaurants and food items.
+### 1. Home Page
+- Attractive landing page with a modern user interface.
+- Explore food categories and popular food items.
+- Search functionality for food items and restaurants.
+- Quick navigation to different sections.
 
-The project aims to bring essential food ordering and restaurant-related functionalities together in one centralized platform. It provides different interfaces for customers to browse restaurants, explore food menus, view food details, manage their wishlist and cart, book tables, and access order-related information.
+### 2. User Authentication
+- User registration and login pages.
+- Login session management.
+- Personalized user greeting.
+- Logout functionality.
 
-The project also focuses on designing an organized interface for restaurant management, providing a foundation for future administrative functionalities.
-
-The current development phase primarily focuses on frontend development using HTML5, CSS3 and JavaScript for client-side interactions. The application is designed with an emphasis on usability, visual consistency and responsive web design.
-
-## 🎯 Project Objectives
-
-- To develop a simple and user-friendly food delivery website.
-- To provide an attractive interface for browsing restaurants.
-- To display restaurant menus and food items in an organized manner.
-- To design a shopping cart interface for managing selected food items.
-- To provide wishlist functionality for favourite food items.
-- To create food details pages with descriptions, prices and customer reviews.
-- To design login and registration interfaces.
-- To provide table booking and order tracking interfaces.
-- To establish a foundation for future restaurant management functionalities.
-
-## ✨ Key Features
-
-### 🏠 1. Homepage
-- Attractive landing page.
-- Easy navigation across different website sections.
-- Food categories and popular restaurant sections.
-- User-friendly interface for exploring the platform.
-
-### 🍽️ 2. Restaurant Listing
+### 3. Restaurant Management
 - Browse available restaurants.
-- Explore restaurant information.
-- View restaurant ratings and cuisines.
-- Navigate to individual restaurant menus.
+- Search restaurants by name.
+- Filter restaurants based on cuisine and ratings.
+- Filter according to delivery time.
+- Sort restaurants by rating, delivery time, and name.
+- Add restaurants to the wishlist.
 
-### 📋 3. Food Menu
-- Organized food categories.
-- Food items with images and prices.
-- Easy navigation through different menu sections.
+### 4. Food Menu
+- Browse available food items.
+- Explore different food categories.
+- View restaurant-specific food menus.
+- Navigate to individual food details.
 
-### 🍛 4. Food Details
-- Dedicated restaurant food details page.
-- Food descriptions and pricing information.
-- Customer reviews and ratings.
-- Write and post reviews functionality.
-
-### ❤️ 5. Wishlist
-- Dedicated page for favourite food items.
-- Interface for displaying selected food items.
-- Designed for dynamic wishlist management.
-
-### 🛒 6. Shopping Cart
+### 5. Shopping Cart
 - Add food items to the cart.
-- Increase or decrease food quantities.
-- Remove items by reducing their quantity.
-- Calculate total items and order amount.
-- Display cart information.
+- Increase or decrease item quantities.
+- Remove individual items.
+- Calculate item totals and the overall bill.
+- Persistent cart data using LocalStorage.
+- Live cart counter.
 
-### 📅 7. Table Booking
-- Dedicated table booking interface.
-- Customer information form.
-- Table reservation details.
+### 6. Wishlist
+- Add and remove restaurants or food items from the wishlist.
+- View saved favourites.
+- Persistent wishlist data using LocalStorage.
 
-### 🚴 8. Order Tracking
-- Dedicated order tracking interface.
-- Order information and status display.
-- Visual representation of the delivery process.
+### 7. Table Booking
+- Select the number of guests.
+- Choose available table options.
+- Confirm and manage table bookings.
 
-### 🔐 9. Login & Registration
-- Separate login and registration pages.
-- User-friendly form layouts.
-- Input fields for account information.
+### 8. Order Confirmation & Tracking
+- Order confirmation interface.
+- Display order information.
+- Track order progress through different stages.
+- View order status and booking information.
 
----
+### 9. Responsive Design
+- User-friendly interface.
+- Separate CSS files for different pages.
+- Responsive styling for different screen sizes.
 
 ## 🛠️ Technologies Used
 
 | Technology | Purpose |
 |---|---|
-| HTML5 | Structure and content of webpages |
-| CSS3 | Styling, layouts and responsive design |
-| JavaScript | DOM manipulation, event handling and client-side interactions |
-
----
-
-## 🏗️ System Architecture
-
-The current version follows a frontend-based architecture.
-
-**Basic System Flow:**
-
-```text
-          Customer / User
-                 |
-                 v
-             Web Browser
-                 |
-                 v
-          Frontend Interface
-                 |
-          -----------------
-          |       |       |
-          v       v       v
-         HTML    CSS  JavaScript
-          |       |       |
-          -----------------
-                 |
-                 v
-       FoodieHub Web Application
-```
-
-The current implementation focuses on the user interface and client-side functionality. Backend services, database connectivity and real-time operations are planned as future enhancements.
-
----
+| HTML5 | Structure of web pages |
+| CSS3 | Styling and responsive layouts |
+| JavaScript | Dynamic functionality and DOM manipulation |
+| JSON Server | Local REST API and JSON-based database |
+| LocalStorage | Persistent cart and wishlist data |
+| SessionStorage | Login session management |
+| Git & GitHub | Version control and project hosting |
 
 ## 📂 Project Structure
 
@@ -128,147 +79,130 @@ The current implementation focuses on the user interface and client-side functio
 Food-Delivery-Management-System/
 │
 ├── CSS/
-│   ├── Wishlist.css
-│   ├── cart.css
-│   ├── fooddetails.css
-│   ├── login.css
-│   ├── menu.css
-│   ├── order-tracking.css
-│   ├── registration.css
+│   ├── style.css
 │   ├── responsive.css
 │   ├── restaurents.css
-│   ├── style.css
-│   └── table-booking.css
+│   ├── menu.css
+│   ├── fooddetails.css
+│   ├── cart.css
+│   ├── Wishlist.css
+│   ├── login.css
+│   ├── registration.css
+│   ├── confirmation.css
+│   ├── table-booking.css
+│   └── order-tracking.css
 │
 ├── HTML/
 │   ├── homepage.html
 │   ├── restaurants.html
 │   ├── menu.html
 │   ├── fooddetails.html
-│   ├── Wishlist.html
 │   ├── cart.html
-│   ├── booking.html
-│   ├── tracking.html
+│   ├── Wishlist.html
 │   ├── login.html
-│   └── registration.html
-│
-├── Images/
-│   ├── Food Images
-│   ├── Restaurant Images
-│   └── Other Website Assets
+│   ├── registration.html
+│   ├── confirmation.html
+│   ├── booking.html
+│   └── tracking.html
 │
 ├── JAVASCRIPT/
-│   └── JavaScript Files
+│   ├── app.js
+│   ├── auth.js
+│   ├── cart-common.js
+│   ├── cart.js
+│   ├── fooddetails.js
+│   ├── login.js
+│   ├── registration.js
+│   ├── restaurants.js
+│   ├── menu.js
+│   ├── wishlist.js
+│   ├── table-booking.js
+│   ├── order-tracking.js
+│   └── confirmation.js
 │
+├── Images/
+│   └── Food and restaurant images
+│
+├── db.json
+├── database.json
 └── README.md
 ```
 
-*Note: The JavaScript directory and filenames should be updated to match the latest files pushed to the repository.*
+## ⚙️ Installation & Setup
 
----
-
-## 🚀 Getting Started
-
-Follow these instructions to run FoodieHub on your local machine.
+Follow these steps to run FoodieHub on your local machine.
 
 ### Prerequisites
+- [Node.js](https://nodejs.org/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- A modern web browser
 
-- Google Chrome, Microsoft Edge or any modern web browser.
-- Visual Studio Code or another code editor.
-- Live Server extension for Visual Studio Code (recommended).
-
-### Installation
-
-**Step 1: Clone the repository**
+### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/Garimabansal-0420/Food-Delivery-Management-System.git
+git clone YOUR_GITHUB_REPOSITORY_URL
 ```
 
-**Step 2: Navigate to the project directory**
+### Step 2: Navigate to the Project Directory
 
 ```bash
 cd Food-Delivery-Management-System
 ```
 
-**Step 3: Open the project**
+### Step 3: Install JSON Server
 
-Open the downloaded folder in Visual Studio Code.
+```bash
+npm install -g json-server
+```
 
-**Step 4: Run the application**
+### Step 4: Start JSON Server
 
-Open `HTML/homepage.html` using the Live Server extension.
+```bash
+json-server --watch db.json --port 3000
+```
 
-Alternatively, open the HTML file directly in your web browser.
+The local JSON Server API will be available at:
 
----
+```text
+http://localhost:3000
+```
 
-## 🧪 Testing
+### Step 5: Run the Project
 
-The project can be tested by exploring its different pages and checking:
+1. Open the project folder in Visual Studio Code.
+2. Open the `HTML` folder.
+3. Run `homepage.html` using the Live Server extension.
+4. Explore the FoodieHub application.
 
-- Navigation between website pages.
-- Restaurant and food menu interfaces.
-- Food details and review functionality.
-- Cart quantity management and price calculation.
-- Wishlist interface and interactions.
-- Login and registration forms.
-- Table booking and order tracking interfaces.
-- Website layout across different screen sizes.
+## 💡 Key Concepts Implemented
 
----
+- DOM Manipulation
+- JavaScript Event Handling
+- Client-Side Form Validation
+- LocalStorage and SessionStorage
+- JSON Data Handling
+- CRUD Operations
+- Search, Filtering and Sorting
+- Dynamic Content Rendering
+- Modular JavaScript
+- Responsive Web Design
 
 ## 🔮 Future Enhancements
 
-The following improvements are planned for future development:
+- Integration with a real payment gateway.
+- Real-time order tracking.
+- Backend development using Node.js and Express.js.
+- Database integration using MongoDB or MySQL.
+- Admin dashboard for restaurant and order management.
+- Improved authentication and authorization.
+- Restaurant-side order management system.
 
-- **React.js Integration:** Convert static HTML pages into reusable and dynamic React components.
-- **Backend Development:** Implement backend services for handling application operations.
-- **Database Integration:** Store user details, restaurant information, food items, orders and reviews.
-- **Authentication:** Implement secure login and registration functionality.
-- **Dynamic Wishlist:** Maintain favourite food items across sessions.
-- **Advanced Cart Management:** Implement persistent cart data and checkout functionality.
-- **Online Payments:** Integrate a secure payment gateway.
-- **Real-Time Order Tracking:** Provide live order status updates.
-- **Restaurant Management Dashboard:** Enable restaurant administrators to manage menus and customer orders.
+## 👩‍💻 Contributors
 
----
+Developed as a third-year B.Tech Computer Science project.
 
-## 👥 Project Team
-
-**B.Tech CSE – 3rd Year**
-
-| Name | University Roll Number |
-|---|---|
-| Divyanshi Upadhyay | 2415000564 |
-| Garima Bansal | 2415000587 |
-| Gaurav | 2415000593 |
-| Hanumant Sahay | 2415000623 |
-
-**Institution:** GLA University, Mathura  
-**Department:** Computer Engineering Applications  
-**Project Supervisor:** Deepak Prasad Sir
+**Project Name:** FoodieHub – Food Delivery Management System
 
 ---
 
-## 🎓 Academic Project
-
-This project is developed as part of the B.Tech Computer Science and Engineering curriculum at GLA University, Mathura.
-
-It demonstrates the application of frontend web development concepts in designing a food delivery and restaurant management platform.
-
----
-
-## ❤️ Acknowledgement
-
-We would like to express our sincere gratitude to our project supervisor, **Deepak Prasad Sir**, for his guidance and support throughout the development of this project.
-
-We also acknowledge GLA University, Mathura, for providing the opportunity to work on this project and enhance our practical knowledge of web development.
-
----
-
-<p align="center">
-  <b>FoodieHub – Bringing Good Food Closer to You! 🍕</b>
-  <br>
-  Developed with ❤️ by Team FoodieHub
-</p>
+⭐ If you find this project interesting, consider giving the repository a star!
