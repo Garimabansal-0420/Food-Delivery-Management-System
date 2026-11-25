@@ -102,7 +102,24 @@ login.addEventListener("click", async function() {
 
        
 
-    let returnToCheckout = sessionStorage.getItem("foodiehub_return_to_checkout");
+    // CHECK WHERE THE USER WANTS TO GO
+
+let returnToPage = sessionStorage.getItem("foodiehub_return_to_page");
+
+if (returnToPage) {
+
+    sessionStorage.removeItem("foodiehub_return_to_page");
+
+    window.location.href = returnToPage;
+
+}
+else {
+
+    // CHECKOUT REDIRECT
+
+    let returnToCheckout = sessionStorage.getItem(
+        "foodiehub_return_to_checkout"
+    );
 
     if (returnToCheckout === "true") {
 
@@ -110,11 +127,14 @@ login.addEventListener("click", async function() {
 
         window.location.href = "cart.html";
 
-    } else {
+    }
+    else {
 
         window.location.href = "homepage.html";
 
     }
+
+}
 
     }
     catch (err) {

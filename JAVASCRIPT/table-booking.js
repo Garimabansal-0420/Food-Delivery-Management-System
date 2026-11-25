@@ -178,6 +178,23 @@ function getBookings() {
 
 function confirmBooking() {
 
+
+    let loggedInUser = sessionStorage.getItem("loggedInUser");
+
+    if (!loggedInUser) {
+
+        sessionStorage.setItem(
+            "foodiehub_return_to_page",
+            "booking.html"
+        );
+
+        alert("Please login first to book a table.");
+
+        window.location.href = "login.html";
+
+        return;
+    }
+
     const name = document
         .getElementById("customerName")
         .value.trim();

@@ -3,7 +3,23 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    
+        // CHECK LOGIN BEFORE SHOWING TRACKING PAGE
+
+    let loggedInUser = sessionStorage.getItem("loggedInUser");
+
+    if (!loggedInUser) {
+
+        sessionStorage.setItem(
+            "foodiehub_return_to_page",
+            "tracking.html"
+        );
+
+        alert("Please login first to view order tracking.");
+
+        window.location.href = "login.html";
+
+        return;
+    }
 
     const ORDER_STORAGE_KEY = "foodiehub_orders";
     const CURRENT_ORDER_KEY = "foodiehub_current_order_id";

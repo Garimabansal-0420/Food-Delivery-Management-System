@@ -20,6 +20,13 @@
       "phone": "9711041832",
       "password": "1234567",
       "id": "zx-rqr0kkak"
+    },
+    {
+      "name": "garima",
+      "email": "garima234@gmail.com",
+      "phone": "7838031522",
+      "password": "12345678",
+      "id": "rffj41TFHBA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
