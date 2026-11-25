@@ -7,9 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCartPage();
 });
 
-// ==========================================
-// 1. TOAST NOTIFICATION
-// ==========================================
+
 
 let toastTimer = null;
 
@@ -306,15 +304,15 @@ function handleCheckout() {
         return;
     }
 
-    // Check whether the user is logged in
+    
     const loggedInUser = sessionStorage.getItem("loggedInUser");
 
     if (!loggedInUser) {
 
-        // Remember that the user wants to continue checkout
+        
         sessionStorage.setItem("foodiehub_return_to_checkout", "true");
 
-        // Redirect to login
+        
         window.location.href = "login.html";
 
         return;
@@ -325,9 +323,7 @@ function handleCheckout() {
     showCheckoutModal(cart, bill);
 }
 
-// ==========================================
-// 9. CHECKOUT MODAL
-// ==========================================
+
 
 function showCheckoutModal(cart, bill) {
 
@@ -465,7 +461,7 @@ function showCheckoutModal(cart, bill) {
             backdrop.classList.remove("show");
         });
 
-    // Close when clicking outside modal
+    
     backdrop.addEventListener("click", event => {
         if (event.target === backdrop) {
             backdrop.classList.remove("show");
@@ -498,9 +494,6 @@ function showCheckoutModal(cart, bill) {
     });
 }
 
-// ==========================================
-// 10. SAVE ORDER
-// ==========================================
 
 function placeOrder(cart, bill, customer) {
 
@@ -553,19 +546,19 @@ function placeOrder(cart, bill, customer) {
 
         existingOrders.push(order);
 
-        // Save order history
+        
         localStorage.setItem(
             ORDER_STORAGE_KEY,
             JSON.stringify(existingOrders)
         );
 
-        // Remember the latest order
+        
         localStorage.setItem(CURRENT_ORDER_KEY, orderId);
 
-        // Clear cart only after order is saved
+        
         window.FoodieHubCart.clear();
 
-        // Redirect to tracking
+        
         window.location.href = "tracking.html";
 
     } catch (error) {
@@ -581,9 +574,7 @@ function placeOrder(cart, bill, customer) {
     }
 }
 
-// ==========================================
-// 11. HTML ESCAPE FUNCTION
-// ==========================================
+
 
 function escapeHTML(value) {
 
@@ -600,9 +591,7 @@ function escapeHTML(value) {
     }[character]));
 }
 
-// ==========================================
-// 12. INITIALIZATION
-// ==========================================
+
 
 function initCartPage() {
 

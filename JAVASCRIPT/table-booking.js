@@ -388,9 +388,6 @@ function resetBooking() {
 }
 
 
-// ==========================================
-// 9. CALL RESTAURANT
-// ==========================================
 
 function callRestaurant() {
 
@@ -399,13 +396,11 @@ function callRestaurant() {
 }
 
 
-// ==========================================
-// 10. INITIALIZE BOOKING
-// ==========================================
+
 
 function initializeBooking() {
 
-    // Set minimum booking date to today
+    
     const now = new Date();
 
     const year = now.getFullYear();
@@ -419,7 +414,7 @@ function initializeBooking() {
     bookingDate.min = today;
 
 
-    // Set default table and guest information
+ 
     selectedTable = "T4";
 
     selectedGuests = 2;
@@ -450,8 +445,6 @@ function initializeBooking() {
 }
 
 
-// ==========================================
-// 11. START
-// ==========================================
+
 
 initializeBooking();

@@ -8,10 +8,10 @@ let show = document.getElementById("show");
 let error = document.getElementById("error");
 let success = document.getElementById("success");
 
-// JSON SERVER API
+
 const API_URL = "http://localhost:3000/users";
 
-// SHOW / HIDE PASSWORD
+
 
 show.addEventListener("click", function() {
 
@@ -27,14 +27,14 @@ show.addEventListener("click", function() {
 });
 
 
-// LOGIN VALIDATION
+
 
 login.addEventListener("click", async function() {
 
     error.textContent = "";
     success.textContent = "";
 
-    // Check empty fields
+    
 
     if (name.value.trim() === "" || psd.value === "") {
         error.textContent = "Please fill all the fields";
@@ -46,8 +46,7 @@ login.addEventListener("click", async function() {
         login.disabled = true;
         login.textContent = "Please wait...";
 
-        // GET all registered users
-
+        
         let response = await fetch(API_URL);
 
         if (!response.ok) {
@@ -56,7 +55,6 @@ login.addEventListener("click", async function() {
 
         let users = await response.json();
 
-        // Find username in registered users
 
         let existingUser = users.find(function(user) {
 
@@ -65,7 +63,7 @@ login.addEventListener("click", async function() {
 
         });
 
-        // Check whether username exists
+       
 
             if (!existingUser) {
                 error.textContent = "Username not registered. Redirecting to registration...";
@@ -77,18 +75,18 @@ login.addEventListener("click", async function() {
                 return;
             }
 
-        // Check password
+        
 
         if (existingUser.password !== psd.value) {
             error.textContent = "Incorrect Password";
             return;
         }
 
-        // LOGIN SUCCESSFUL
+        
 
         success.textContent = "Login Successful! Welcome to FoodieHub";
 
-        // Store logged-in user's details in sessionStorage
+      
 
         let loggedInUser = {
             id: existingUser.id,
@@ -102,9 +100,7 @@ login.addEventListener("click", async function() {
             JSON.stringify(loggedInUser)
         );
 
-        // Redirect to homepage
-
-        // Check whether user came from checkout
+       
 
     let returnToCheckout = sessionStorage.getItem("foodiehub_return_to_checkout");
 

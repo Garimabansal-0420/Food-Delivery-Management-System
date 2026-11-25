@@ -1,7 +1,5 @@
 
-// ==========================================
-// FOODIEHUB RESTAURANTS
-// ==========================================
+
 
 const WISHLIST_KEY = "foodiehub_wishlist";
 
@@ -31,9 +29,6 @@ const CARDS_PER_LOAD = 6;
 let visibleCount = CARDS_PER_LOAD;
 
 
-// ==========================================
-// 1. GET WISHLIST
-// ==========================================
 
 function getWishlist() {
     try {
@@ -50,9 +45,7 @@ function getWishlist() {
 }
 
 
-// ==========================================
-// 2. SAVE WISHLIST
-// ==========================================
+
 
 function saveWishlist(wishlist) {
     localStorage.setItem(
@@ -64,18 +57,14 @@ function saveWishlist(wishlist) {
 }
 
 
-// ==========================================
-// 3. UPDATE WISHLIST COUNT
-// ==========================================
+
 
 function updateWishlistCount() {
     wishlistCount.textContent = getWishlist().length;
 }
 
 
-// ==========================================
-// 4. CREATE RESTAURANT ID
-// ==========================================
+
 
 function createRestaurantId(name) {
     return name
@@ -86,9 +75,7 @@ function createRestaurantId(name) {
 }
 
 
-// ==========================================
-// 5. GET RESTAURANT DATA
-// ==========================================
+
 
 function getRestaurantData(card) {
 
@@ -112,9 +99,7 @@ function getRestaurantData(card) {
 }
 
 
-// ==========================================
-// 6. UPDATE HEART BUTTONS
-// ==========================================
+
 
 function updateWishlistButtons() {
 
@@ -156,9 +141,7 @@ function updateWishlistButtons() {
 }
 
 
-// ==========================================
-// 7. FILTER RESTAURANTS
-// ==========================================
+
 
 function getFilteredRestaurants() {
 
@@ -211,9 +194,7 @@ function getFilteredRestaurants() {
 }
 
 
-// ==========================================
-// 8. SORT RESTAURANTS
-// ==========================================
+
 
 function sortRestaurants(cards) {
 
@@ -260,9 +241,7 @@ function sortRestaurants(cards) {
 }
 
 
-// ==========================================
-// 9. DISPLAY RESTAURANTS
-// ==========================================
+
 
 function displayRestaurants() {
 
@@ -298,9 +277,7 @@ function displayRestaurants() {
 }
 
 
-// ==========================================
-// 10. FILTER EVENTS
-// ==========================================
+
 
 function handleFilterChange() {
 
@@ -320,9 +297,7 @@ timeFilter.addEventListener("change", handleFilterChange);
 sortFilter.addEventListener("change", handleFilterChange);
 
 
-// ==========================================
-// 11. CLEAR FILTERS
-// ==========================================
+
 
 clearFiltersButton.addEventListener("click", () => {
 
@@ -342,9 +317,6 @@ clearFiltersButton.addEventListener("click", () => {
 });
 
 
-// ==========================================
-// 12. LOAD MORE
-// ==========================================
 
 loadMoreButton.addEventListener("click", () => {
 
@@ -354,9 +326,6 @@ loadMoreButton.addEventListener("click", () => {
 });
 
 
-// ==========================================
-// 13. WISHLIST HEART BUTTON
-// ==========================================
 
 restaurantContainer.addEventListener("click", event => {
 
@@ -396,9 +365,7 @@ restaurantContainer.addEventListener("click", event => {
 });
 
 
-// ==========================================
-// 14. SYNC WHEN ANOTHER TAB CHANGES WISHLIST
-// ==========================================
+
 
 window.addEventListener("storage", event => {
 
@@ -408,18 +375,14 @@ window.addEventListener("storage", event => {
 });
 
 
-// ==========================================
-// 15. INITIALIZE
-// ==========================================
+
 
 updateWishlistButtons();
 
 displayRestaurants();
 
 
-// ==========================================
-// VISIT RESTAURANT
-// ==========================================
+
 
 restaurantContainer.addEventListener("click", event => {
 

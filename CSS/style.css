@@ -829,3 +829,39 @@ input {
     font: inherit;
     cursor: pointer;
 }
+
+
+
+.account-section {
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 30px;
+    background-color: #fff7ed;
+}
+
+.account-section h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.account-section p {
+    color: #666;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+#delete-account {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+#delete-account:hover {
+    background-color: #b91c1c;
+}

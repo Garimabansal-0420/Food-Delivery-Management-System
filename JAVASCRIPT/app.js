@@ -1,11 +1,4 @@
-/**
- * FoodieHub - Home Page JavaScript
- * Handles:
- *  1. Add to Cart with localStorage persistence ("foodiehub_cart")
- *  2. Live Cart Counter in Navbar
- *  3. Search functionality for popular food items (Button click & Enter key)
- *  4. Wishlist toggling and state restoration ("foodiehub_wishlist")
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
     initCartCounter();
@@ -14,13 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initSearch();
 });
 
-// ==========================================
-// 1. CONSTANTS & STORAGE HELPERS
-// ==========================================
+
 const CART_STORAGE_KEY = 'foodiehub_cart';
 const WISHLIST_STORAGE_KEY = 'foodiehub_wishlist';
 
-// Map restaurant affiliations to match the rest of the FoodieHub app
+
 const RESTAURANT_MAP = {
     'Cheese Pizza': 'Italiano Pizza',
     'Classic Burger': 'Burger House',
@@ -65,9 +56,7 @@ function saveWishlist(list) {
     }
 }
 
-// ==========================================
-// 2. TOAST NOTIFICATION
-// ==========================================
+
 let toastTimer = null;
 
 function showToast(message) {
@@ -91,9 +80,7 @@ function showToast(message) {
     }, 2500);
 }
 
-// ==========================================
-// 3. CART COUNTER
-// ==========================================
+
 function updateCartCounter() {
     const counterElement = document.getElementById('cart-counter');
     if (!counterElement) return;
@@ -106,7 +93,7 @@ function updateCartCounter() {
 function initCartCounter() {
     updateCartCounter();
 
-    // Listen to changes from other tabs or windows
+    
     window.addEventListener('storage', (event) => {
         if (event.key === CART_STORAGE_KEY) {
             updateCartCounter();
@@ -116,9 +103,7 @@ function initCartCounter() {
     });
 }
 
-// ==========================================
-// 4. ADD TO CART FUNCTIONALITY
-// ==========================================
+
 function initAddToCart() {
     const foodCards = document.querySelectorAll('.popular-food .food-card');
 
@@ -129,7 +114,7 @@ function initAddToCart() {
         addBtn.addEventListener('click', (e) => {
             e.preventDefault();
 
-            // Extract item details from the existing HTML elements
+            
             const nameEl = card.querySelector('h3');
             const priceEl = card.querySelector('.price');
             const imgEl = card.querySelector('.food-image img');
@@ -142,7 +127,7 @@ function initAddToCart() {
             const description = descEl ? descEl.textContent.trim() : '';
             const restaurant = RESTAURANT_MAP[name] || 'FoodieHub Kitchen';
 
-            // Add item to cart or increase quantity if it already exists
+            
             const cart = getCart();
             const existingItem = cart.find(item => item.name === name);
 
@@ -163,7 +148,7 @@ function initAddToCart() {
             saveCart(cart);
             showToast(`✓ Added "${name}" to your cart!`);
 
-            // Temporary visual feedback on the button
+            
             const originalText = addBtn.textContent;
             addBtn.textContent = '✓ Added!';
             addBtn.disabled = true;
@@ -176,9 +161,7 @@ function initAddToCart() {
     });
 }
 
-// ==========================================
-// 5. WISHLIST FUNCTIONALITY
-// ==========================================
+
 function syncWishlistUI() {
     const wishlist = getWishlist();
     const foodCards = document.querySelectorAll('.popular-food .food-card');
@@ -229,14 +212,14 @@ function initWishlist() {
             const existingIndex = wishlist.findIndex(item => (typeof item === 'string' ? item === name : item.name === name));
 
             if (existingIndex > -1) {
-                // Remove from wishlist
+                
                 wishlist.splice(existingIndex, 1);
                 favBtn.textContent = '♡';
                 favBtn.classList.remove('active');
                 favBtn.setAttribute('aria-label', `Add ${name} to Wishlist`);
                 showToast(`Removed "${name}" from Wishlist`);
             } else {
-                // Add to wishlist
+                
                 wishlist.push({
                     id: name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
                     name: name,
@@ -254,9 +237,7 @@ function initWishlist() {
     });
 }
 
-// ==========================================
-// 6. SEARCH FUNCTIONALITY
-// ==========================================
+
 function initSearch() {
     const searchInput = document.querySelector('.search-box input');
     const searchBtn = document.querySelector('.search-box button');
@@ -302,7 +283,7 @@ function initSearch() {
             noMatchMessage.style.display = 'none';
         }
 
-        // Smooth scroll to the popular food section if user entered a search query
+        
         if (query !== '') {
             const popularSection = document.querySelector('.popular-food');
             if (popularSection) {
@@ -311,10 +292,10 @@ function initSearch() {
         }
     }
 
-    // Trigger on button click
+    
     searchBtn.addEventListener('click', performSearch);
 
-    // Trigger on Enter key
+    
     searchInput.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
@@ -322,7 +303,7 @@ function initSearch() {
         }
     });
 
-    // Reset when search input is cleared
+    
     searchInput.addEventListener('input', () => {
         if (searchInput.value.trim() === '') {
             performSearch();

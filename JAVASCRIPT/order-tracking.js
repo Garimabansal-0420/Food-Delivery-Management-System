@@ -1,22 +1,15 @@
 
-/**
- * FoodieHub - Dynamic Order Tracking
- * Works with the ORIGINAL tracking.html structure.
- */
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ========================================
-    // 1. STORAGE KEYS
-    // ========================================
+    
 
     const ORDER_STORAGE_KEY = "foodiehub_orders";
     const CURRENT_ORDER_KEY = "foodiehub_current_order_id";
     const BOOKING_STORAGE_KEY = "foodiehub_bookings";
 
-    // ========================================
-    // 2. GET HTML ELEMENTS
-    // ========================================
+    
 
     const restaurantName = document.querySelector(".restaurant-info h2");
     const orderIdElement = document.querySelector(".order-number strong");
@@ -44,9 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentOrder = null;
     let currentStatus = 0;
 
-    // ========================================
-    // 3. STATUS INFORMATION
-    // ========================================
+   
 
     const statuses = [
         {
@@ -79,9 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    // ========================================
-    // 4. HELPER FUNCTIONS
-    // ========================================
+   
 
     function escapeHTML(value) {
         return String(value ?? "").replace(/[&<>'"]/g, character => ({
@@ -136,20 +125,18 @@ document.addEventListener("DOMContentLoaded", () => {
         return 0;
     }
 
-    // ========================================
-    // 5. CREATE DYNAMIC ORDER SUMMARY AREA
-    // ========================================
+ 
 
     function prepareSummaryArea() {
 
         if (!summaryCard) return;
 
-        // Remove old demo food items and total
+        
         summaryCard.querySelectorAll(".food-item, .total-row").forEach(
             element => element.remove()
         );
 
-        // Create dynamic food item container
+        
         let foodContainer = document.getElementById("orderFoodItems");
 
         if (!foodContainer) {
@@ -165,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        // Create dynamic total
+        
         let totalRow = document.getElementById("trackingTotalRow");
 
         if (!totalRow) {
@@ -181,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
             foodContainer.insertAdjacentElement("afterend", totalRow);
         }
 
-        // Create customer details container
+        
         let customerDetails = document.getElementById(
             "deliveryCustomerDetails"
         );
@@ -194,9 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // ========================================
-    // 6. DISPLAY ORDER INFORMATION
-    // ========================================
+   
 
     function renderOrderInformation() {
 
@@ -228,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "deliveryCustomerDetails"
         );
 
-        // Display actual ordered food
+        
         if (foodContainer) {
 
             if (!items.length) {
@@ -269,7 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        // Display actual grand total
+       
         const bill = currentOrder.bill || {};
 
         const calculatedTotal = items.reduce((sum, item) => {
@@ -284,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
             );
         }
 
-        // Display customer delivery information
+        
         const customer = currentOrder.customer || {};
 
         if (customerDetails) {
@@ -303,9 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateStatusUI();
     }
 
-    // ========================================
-    // 7. NO ORDER MESSAGE
-    // ========================================
+    
 
     function showNoOrderMessage() {
 
@@ -373,9 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (callButton) callButton.disabled = true;
     }
 
-    // ========================================
-    // 8. UPDATE ORDER STATUS
-    // ========================================
+   
 
     function updateStatusUI() {
 
@@ -403,7 +384,7 @@ document.addEventListener("DOMContentLoaded", () => {
             progressFill.style.width = (currentStatus / 3) * 100 + "%";
         }
 
-        // Update progress icons
+        
         progressItems.forEach((item, index) => {
 
             item.classList.remove("completed", "active");
@@ -415,7 +396,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Update timeline
+        
         timelineItems.forEach((item, index) => {
 
             item.classList.remove("completed", "active");
@@ -460,9 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // ========================================
-    // 9. SAVE ORDER STATUS
-    // ========================================
+    
 
     function saveCurrentStatus() {
 
@@ -491,9 +470,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 
-    // ========================================
-    // 10. DEMO STATUS BUTTONS
-    // ========================================
+   
 
     function createStatusControls() {
 
@@ -539,9 +516,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateStatusUI();
     }
 
-    // ========================================
-    // 11. MODAL
-    // ========================================
+    
 
     function showModal(title, content) {
 
@@ -579,9 +554,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ========================================
-    // 12. CALL DELIVERY PARTNER
-    // ========================================
+   
 
     if (callButton) {
         callButton.addEventListener("click", () => {
@@ -592,9 +565,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ========================================
-    // 13. VIEW ORDER DETAILS
-    // ========================================
+    
 
     if (detailsButton) {
 
@@ -633,9 +604,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ========================================
-    // 14. TABLE BOOKING HISTORY
-    // ========================================
+    
 
     function displayBookings() {
 
@@ -706,9 +675,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ========================================
-    // 15. LISTEN FOR STORAGE CHANGES
-    // ========================================
+    
 
     window.addEventListener("storage", event => {
 
@@ -724,9 +691,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // ========================================
-    // 16. INITIALIZE PAGE
-    // ========================================
+   
 
     currentOrder = getCurrentOrder();
 

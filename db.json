@@ -1,3 +1,26 @@
 {
-  "users": []
+  "users": [
+    {
+      "name": "Abhishek Verma",
+      "email": "abhi2323@gmail.com",
+      "phone": "7838031522",
+      "password": "Abhishek@2006",
+      "id": "7OU6F0D4sf8"
+    },
+    {
+      "name": "Aryansh sikarwar",
+      "email": "gitasak907@donumart.com",
+      "phone": "9711041832",
+      "password": "Aryansh@123",
+      "id": "i1NPldfQvJo"
+    },
+    {
+      "name": "Hanumant",
+      "email": "hanumant123@gmail.com",
+      "phone": "9711041832",
+      "password": "1234567",
+      "id": "zx-rqr0kkak"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

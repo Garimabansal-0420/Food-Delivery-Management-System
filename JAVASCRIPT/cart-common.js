@@ -3,7 +3,7 @@
 
     const CART_STORAGE_KEY = "foodiehub_cart";
 
-    // Get all cart items
+    
     function getCart() {
         try {
             const cart = JSON.parse(
@@ -18,14 +18,14 @@
         }
     }
 
-    // Get total quantity
+    
     function getCount() {
         return getCart().reduce((total, item) => {
             return total + Number(item.quantity || 0);
         }, 0);
     }
 
-    // Update navbar counter
+    
     function updateCounter() {
         const count = getCount();
 
@@ -35,7 +35,7 @@
             });
     }
 
-    // Save cart and notify pages
+
     function saveCart(cart) {
 
         localStorage.setItem(
@@ -50,7 +50,7 @@
         );
     }
 
-    // Add item
+    
     function add(item) {
 
         const cart = getCart();
@@ -72,7 +72,7 @@
         saveCart(cart);
     }
 
-    // Decrease quantity by one
+    
     function removeOne(id) {
 
         const cart = getCart();
@@ -94,7 +94,7 @@
         return true;
     }
 
-    // Remove complete item
+    
     function remove(id) {
 
         const cart = getCart();
@@ -112,12 +112,12 @@
         return true;
     }
 
-    // Clear complete cart
+    
     function clear() {
         saveCart([]);
     }
 
-    // Public methods
+    
     window.FoodieHubCart = {
         get: getCart,
         add: add,
@@ -128,7 +128,7 @@
         updateCounter: updateCounter
     };
 
-    // Synchronize other tabs
+    
     window.addEventListener("storage", function (event) {
 
         if (event.key === CART_STORAGE_KEY) {
@@ -141,7 +141,7 @@
 
     });
 
-    // Initial counter
+    
     if (document.readyState === "loading") {
         document.addEventListener(
             "DOMContentLoaded",

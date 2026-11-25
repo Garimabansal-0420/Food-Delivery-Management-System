@@ -1,13 +1,9 @@
 
-// =====================================
-// FOODIEHUB FOOD DETAILS FUNCTIONALITY
-// =====================================
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =====================================
-    // CART FUNCTIONALITY
-    // =====================================
+    
 
     const foodCards = document.querySelectorAll(".food-card");
     const cartMessage = document.querySelector(".cart-message");
@@ -16,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const RESTAURANT_NAME = "Dum Safar Biryani";
 
 
-    // Generate a stable ID for each food item
+    
 
     function getFoodId(card, foodName) {
 
@@ -30,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // Get quantity of a particular food item
+    
 
     function getFoodQuantity(foodId) {
 
@@ -45,9 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // =====================================
-    // UPDATE FOOD BUTTONS
-    // =====================================
+    
 
     function updateFoodButtons() {
 
@@ -80,9 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // =====================================
-    // UPDATE CART BAR
-    // =====================================
+    
 
     function updateCart() {
 
@@ -124,9 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // =====================================
-    // ADD AND REMOVE FOOD
-    // =====================================
 
     foodCards.forEach(function (card) {
 
@@ -150,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 getFoodQuantity(foodId);
 
 
-            // If item is not in cart, add it
+            
 
             if (quantity === 0) {
 
@@ -166,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             } else {
 
-                // Check which side of button was clicked
+                
 
                 const buttonRect =
                     addButton.getBoundingClientRect();
@@ -177,13 +166,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (clickPosition < buttonRect.width / 2) {
 
-                    // Left side: decrease quantity
+                    
 
                     FoodieHubCart.removeOne(foodId);
 
                 } else {
 
-                    // Right side: increase quantity
+                    
 
                     FoodieHubCart.add({
 
@@ -207,9 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // =====================================
-    // VIEW CART
-    // =====================================
+
 
     if (viewCartBtn) {
 
@@ -234,9 +221,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // =====================================
-    // LISTEN FOR CART CHANGES
-    // =====================================
 
     window.addEventListener("foodiehub:cart-updated", function () {
 
@@ -246,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Update if cart changes in another browser tab
+    
 
     window.addEventListener("storage", function (event) {
 
@@ -260,15 +244,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Initial cart display
+    
 
     updateFoodButtons();
     updateCart();
 
 
-    // =====================================
-    // WRITE AND POST REVIEW FUNCTIONALITY
-    // =====================================
+   
 
     const reviewForm =
         document.getElementById("reviewForm");
@@ -283,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
 
 
-            // Get user input
+           
 
             const name =
                 document.getElementById("reviewerName").value.trim();
@@ -295,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("reviewText").value.trim();
 
 
-            // Validate input
+            
 
             if (name === "" || rating === "" || reviewText === "") {
 
@@ -306,7 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            // CREATE REVIEW CARD
+            
 
             const reviewCard =
                 document.createElement("div");
@@ -314,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
             reviewCard.className = "review-card";
 
 
-            // REVIEW HEADER
+            
 
             const reviewTop =
                 document.createElement("div");
@@ -322,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function () {
             reviewTop.className = "review-top";
 
 
-            // USER DETAILS
+            
 
             const reviewUser =
                 document.createElement("div");
@@ -330,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
             reviewUser.className = "review-user";
 
 
-            // PROFILE CIRCLE
+            
 
             const profileCircle =
                 document.createElement("div");
@@ -341,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 name.charAt(0).toUpperCase();
 
 
-            // USER INFORMATION
+            
 
             const userInfo =
                 document.createElement("div");
@@ -361,13 +343,13 @@ document.addEventListener("DOMContentLoaded", function () {
             userInfo.appendChild(userType);
 
 
-            // ADD USER DETAILS
+            
 
             reviewUser.appendChild(profileCircle);
             reviewUser.appendChild(userInfo);
 
 
-            // REVIEW RATING
+            
 
             const reviewRating =
                 document.createElement("div");
@@ -378,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "★ " + rating + ".0";
 
 
-            // REVIEW DESCRIPTION
+            
 
             const reviewDescription =
                 document.createElement("p");
@@ -387,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 '"' + reviewText + '"';
 
 
-            // BUILD REVIEW CARD
+            
 
             reviewTop.appendChild(reviewUser);
             reviewTop.appendChild(reviewRating);
@@ -396,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function () {
             reviewCard.appendChild(reviewDescription);
 
 
-            // ADD REVIEW TO PAGE
+            
 
             const writeReview =
                 document.querySelector(".write-review");
@@ -415,12 +397,12 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            // RESET FORM
+            
 
             reviewForm.reset();
 
 
-            // SUCCESS MESSAGE
+            
 
             alert("Your review has been posted successfully!");
 

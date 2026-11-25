@@ -1,7 +1,5 @@
 
-// =====================================
-// FOODIEHUB MENU FUNCTIONALITY
-// =====================================
+
 
 const SELECTED_RESTAURANT_KEY = "foodiehub_selected_restaurant";
 
@@ -20,9 +18,7 @@ const restaurantCuisineElement = document.querySelector("#selectedRestaurantCuis
 const viewAllMenuButton = document.querySelector("#viewAllMenu");
 
 
-// =====================================
-// RESTAURANT-CATEGORY MAPPING
-// =====================================
+
 
 const categoryCuisineMap = {
     "chatpata swaad": ["north indian", "indian", "snacks", "fast food"],
@@ -44,9 +40,7 @@ const categoryCuisineMap = {
 };
 
 
-// =====================================
-// GET SELECTED RESTAURANT
-// =====================================
+
 
 function getSelectedRestaurant() {
     try {
@@ -62,9 +56,7 @@ function getSelectedRestaurant() {
 let selectedRestaurant = getSelectedRestaurant();
 
 
-// =====================================
-// RESTAURANT BANNER
-// =====================================
+
 
 function displayRestaurantBanner() {
 
@@ -83,9 +75,7 @@ function displayRestaurantBanner() {
 }
 
 
-// =====================================
-// FILTER BY RESTAURANT CUISINE
-// =====================================
+
 
 function getRestaurantMenu() {
 
@@ -118,9 +108,6 @@ function getRestaurantMenu() {
 }
 
 
-// =====================================
-// LOAD MORE VARIABLES
-// =====================================
 
 let visibleCards = 3;
 const cardsPerClick = 3;
@@ -129,9 +116,6 @@ let restaurantMenu = getRestaurantMenu();
 let filteredCards = [...restaurantMenu];
 
 
-// =====================================
-// DISPLAY MENU CARDS
-// =====================================
 
 function displayCards() {
 
@@ -159,9 +143,6 @@ function displayCards() {
 }
 
 
-// =====================================
-// SEARCH MENU
-// =====================================
 
 searchInput.addEventListener("input", function () {
 
@@ -201,9 +182,7 @@ searchInput.addEventListener("input", function () {
 });
 
 
-// =====================================
-// LOAD MORE
-// =====================================
+
 
 loadMoreBtn.addEventListener("click", function () {
 
@@ -213,9 +192,6 @@ loadMoreBtn.addEventListener("click", function () {
 });
 
 
-// =====================================
-// VIEW ALL MENU
-// =====================================
 
 viewAllMenuButton.addEventListener("click", function () {
 
@@ -239,9 +215,7 @@ viewAllMenuButton.addEventListener("click", function () {
 });
 
 
-// =====================================
-// ADD AND REMOVE BUTTONS
-// =====================================
+
 
 menuCards.forEach((card, cardIndex) => {
 
@@ -249,13 +223,13 @@ menuCards.forEach((card, cardIndex) => {
 
     items.forEach((item, itemIndex) => {
 
-        // Skip description paragraphs
+       
 
         if (item.querySelector("p")) {
             return;
         }
 
-        // Get dish name
+        
 
         const dishName = Array.from(item.childNodes)
             .filter(node => node.nodeType === Node.TEXT_NODE)
@@ -268,7 +242,7 @@ menuCards.forEach((card, cardIndex) => {
             return;
         }
 
-        // Get dish price
+        
 
         const priceElement = item.querySelector("span");
 
@@ -276,14 +250,14 @@ menuCards.forEach((card, cardIndex) => {
             ? Number(priceElement.innerText.replace(/[^\d.]/g, ""))
             : 0;
 
-        // Get category
+       
 
         const category = card
             .querySelector(".itemname h1")
             .innerText
             .trim();
 
-        // Create restaurant-specific ID
+     
 
         const restaurantId = selectedRestaurant
             ? selectedRestaurant.id
@@ -292,13 +266,13 @@ menuCards.forEach((card, cardIndex) => {
         const dishId =
             `${restaurantId}-menu-${cardIndex}-${itemIndex}`;
 
-        // Avoid creating buttons more than once
+   
 
         if (item.querySelector(".add-cart-btn")) {
             return;
         }
 
-        // Add button
+        
 
         const addButton = document.createElement("button");
 
@@ -306,7 +280,7 @@ menuCards.forEach((card, cardIndex) => {
         addButton.innerText = "Add";
         addButton.classList.add("add-cart-btn");
 
-        // Remove button
+        
 
         const removeButton = document.createElement("button");
 
@@ -317,7 +291,7 @@ menuCards.forEach((card, cardIndex) => {
         item.appendChild(addButton);
         item.appendChild(removeButton);
 
-        // Add to shared cart
+        
 
         addButton.addEventListener("click", function () {
 
@@ -334,7 +308,7 @@ menuCards.forEach((card, cardIndex) => {
 
         });
 
-        // Remove from shared cart
+        
 
         removeButton.addEventListener("click", function () {
 
@@ -348,9 +322,7 @@ menuCards.forEach((card, cardIndex) => {
 });
 
 
-// =====================================
-// INITIALIZE
-// =====================================
+
 
 displayRestaurantBanner();
 displayCards();

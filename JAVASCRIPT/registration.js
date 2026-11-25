@@ -15,11 +15,10 @@ let strength = document.getElementById("strength");
 let success = document.getElementById("success");
 
 
-// JSON SERVER API
+
 const API_URL = "http://localhost:3000/users";
 
 
-// SHOW / HIDE PASSWORD
 
 show.addEventListener("click", function() {
 
@@ -35,7 +34,7 @@ show.addEventListener("click", function() {
 });
 
 
-// PASSWORD STRENGTH CHECKER
+
 
 psd.addEventListener("input", function() {
 
@@ -60,7 +59,7 @@ psd.addEventListener("input", function() {
 });
 
 
-// CONFIRM PASSWORD CHECKER
+
 
 cpsd.addEventListener("input", function() {
 
@@ -79,14 +78,14 @@ cpsd.addEventListener("input", function() {
 });
 
 
-// REGISTRATION VALIDATION AND JSON SERVER
+
 
 register.addEventListener("click", async function() {
 
     error.textContent = "";
     success.textContent = "";
 
-    // Check empty fields
+    
 
     if (name.value.trim() === "" ||
         email.value.trim() === "" ||
@@ -99,7 +98,7 @@ register.addEventListener("click", async function() {
     }
 
 
-    // Email validation
+    
 
     if (!email.value.includes("@") || !email.value.includes(".")) {
 
@@ -108,7 +107,7 @@ register.addEventListener("click", async function() {
     }
 
 
-    // Phone number validation
+    
 
     if (!/^\d{10}$/.test(phone.value.trim())) {
 
@@ -117,7 +116,7 @@ register.addEventListener("click", async function() {
     }
 
 
-    // Password validation
+
 
     if (psd.value.length < 6) {
 
@@ -126,7 +125,7 @@ register.addEventListener("click", async function() {
     }
 
 
-    // Confirm password validation
+    
 
     if (psd.value !== cpsd.value) {
 
@@ -135,7 +134,7 @@ register.addEventListener("click", async function() {
     }
 
 
-    // CHECK EXISTING USERS USING GET
+    
 
     try {
 
@@ -167,7 +166,7 @@ register.addEventListener("click", async function() {
         }
 
 
-        // CREATE NEW USER OBJECT
+        
 
         let newUser = {
 
@@ -179,7 +178,7 @@ register.addEventListener("click", async function() {
         };
 
 
-        // SAVE USER USING POST
+        
 
         let saveResponse = await fetch(API_URL, {
 
@@ -199,7 +198,7 @@ register.addEventListener("click", async function() {
         }
 
 
-        // REGISTRATION SUCCESSFUL
+        
 
         success.textContent = "Account created successfully!";
 

@@ -1,7 +1,5 @@
 
-// ==========================================
-// FOODIEHUB WISHLIST
-// ==========================================
+
 
 const WISHLIST_KEY = "foodiehub_wishlist";
 const SELECTED_RESTAURANT_KEY = "foodiehub_selected_restaurant";
@@ -13,9 +11,7 @@ const sortSelect =
     document.querySelector(".sort-select");
 
 
-// ==========================================
-// 1. GET WISHLIST
-// ==========================================
+
 
 function getWishlist() {
 
@@ -36,9 +32,7 @@ function getWishlist() {
 }
 
 
-// ==========================================
-// 2. SAVE WISHLIST
-// ==========================================
+
 
 function saveWishlist(wishlist) {
 
@@ -51,9 +45,6 @@ function saveWishlist(wishlist) {
 }
 
 
-// ==========================================
-// 3. ESCAPE HTML
-// ==========================================
 
 function escapeHTML(value) {
 
@@ -69,9 +60,6 @@ function escapeHTML(value) {
 }
 
 
-// ==========================================
-// 4. RENDER WISHLIST
-// ==========================================
 
 function renderWishlist() {
 
@@ -165,10 +153,6 @@ function renderWishlist() {
 }
 
 
-// ==========================================
-// 5. REMOVE RESTAURANT
-// ==========================================
-
 function removeRestaurant(id) {
 
     const wishlist = getWishlist();
@@ -182,9 +166,7 @@ function removeRestaurant(id) {
 }
 
 
-// ==========================================
-// 6. SORT RESTAURANTS
-// ==========================================
+
 
 function sortRestaurants() {
 
@@ -245,13 +227,10 @@ function sortRestaurants() {
 }
 
 
-// ==========================================
-// 7. EVENT DELEGATION
-// ==========================================
 
 restaurantGrid.addEventListener("click", event => {
 
-    // REMOVE RESTAURANT
+    
 
     const removeButton =
         event.target.closest(".remove-btn");
@@ -266,8 +245,7 @@ restaurantGrid.addEventListener("click", event => {
     }
 
 
-    // ORDER RESTAURANT
-
+    
     const orderButton =
         event.target.closest(".order-btn");
 
@@ -293,30 +271,26 @@ restaurantGrid.addEventListener("click", event => {
             return;
         }
 
-        // SAVE SELECTED RESTAURANT
+        
 
         localStorage.setItem(
             SELECTED_RESTAURANT_KEY,
             JSON.stringify(selectedRestaurant)
         );
 
-        // REDIRECT TO MENU PAGE
+       
 
         window.location.href = "menu.html";
     }
 });
 
 
-// ==========================================
-// 8. SORT EVENT
-// ==========================================
+
 
 sortSelect.addEventListener("change", sortRestaurants);
 
 
-// ==========================================
-// 9. CROSS-TAB SYNCHRONIZATION
-// ==========================================
+
 
 window.addEventListener("storage", event => {
 
@@ -326,8 +300,6 @@ window.addEventListener("storage", event => {
 });
 
 
-// ==========================================
-// 10. INITIALIZE
-// ==========================================
+
 
 renderWishlist();
