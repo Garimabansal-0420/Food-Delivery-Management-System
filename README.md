@@ -1,8 +1,8 @@
 # 🍔 FoodieHub – Food Delivery Management System
 
-FoodieHub is a web-based Food Delivery Management System developed to provide users with a convenient and interactive food ordering experience. The application allows users to explore restaurants, browse food menus, view food details, add items to their cart, manage their wishlist, book tables, and track their orders.
+FoodieHub is a web-based Food Delivery Management System developed as a Third-Year B.Tech Mini Project. It provides users with an interactive platform to explore restaurants, browse food menus, manage their favourite restaurants, add food items to a shopping cart, book tables, and track orders.
 
-The project focuses on implementing core frontend development concepts, JavaScript functionality, browser storage, API integration, and dynamic user interactions.
+The project is built using **HTML5, CSS3, JavaScript, and JSON Server**. It focuses on practical implementation of frontend development concepts, DOM manipulation, event handling, browser storage, API integration, and dynamic data management.
 
 ---
 
@@ -10,7 +10,7 @@ The project focuses on implementing core frontend development concepts, JavaScri
 
 ### 1. Home Page
 - Interactive landing page with a user-friendly interface.
-- Explore popular food items and categories.
+- Explore food categories and popular food items.
 - Search for food items.
 - Add food items directly to the cart.
 - Add favourite food items to the wishlist.
@@ -25,7 +25,7 @@ The project focuses on implementing core frontend development concepts, JavaScri
 - Session management using SessionStorage.
 - Personalized user greeting.
 - Logout functionality.
-- Account deletion functionality using JSON Server API.
+- Account deletion using JSON Server API.
 
 ### 3. Restaurant Management
 - Browse available restaurants.
@@ -34,7 +34,7 @@ The project focuses on implementing core frontend development concepts, JavaScri
 - Filter restaurants based on ratings.
 - Filter restaurants according to delivery time.
 - Sort restaurants by rating, delivery time, and name.
-- Load More functionality to display additional restaurants.
+- Load More functionality.
 - Add and remove restaurants from the wishlist.
 
 ### 4. Food Menu
@@ -46,7 +46,7 @@ The project focuses on implementing core frontend development concepts, JavaScri
 
 ### 5. Food Details
 - Dedicated restaurant food details page.
-- Display restaurant information and food items.
+- Display restaurant information and available food items.
 - View food descriptions and prices.
 - Add food items to the cart.
 - Increase or decrease food quantities.
@@ -61,6 +61,7 @@ The project focuses on implementing core frontend development concepts, JavaScri
 - Dynamic cart counter.
 - Persistent cart data using LocalStorage.
 - Checkout functionality.
+- Order creation and storage.
 
 ### 7. Wishlist
 - Save favourite restaurants.
@@ -85,7 +86,7 @@ The project focuses on implementing core frontend development concepts, JavaScri
 - Save booking details.
 - Display booking confirmation.
 
-### 9. Order Confirmation & Tracking
+### 9. Order Confirmation and Tracking
 - Order confirmation interface.
 - Display order details and food items.
 - Track order progress through different stages:
@@ -114,7 +115,7 @@ The project focuses on implementing core frontend development concepts, JavaScri
 | DOM Manipulation | Accessing and modifying HTML elements |
 | LocalStorage | Persistent cart, wishlist, booking, and order data |
 | SessionStorage | User login and session management |
-| JSON Server | Mock REST API for user registration, login data retrieval, and account deletion |
+| JSON Server | Mock REST API for user-related operations |
 | Fetch API | Communication with the JSON Server backend |
 | Git & GitHub | Version control and project collaboration |
 | VS Code | Development environment |
@@ -175,6 +176,7 @@ Food-Delivery-Management-System/
 │   └── Registration images
 │
 ├── db.json
+├── index.html
 └── README.md
 ```
 
@@ -182,30 +184,79 @@ Food-Delivery-Management-System/
 
 ## 🔗 Application Workflow
 
-The application follows a multi-page architecture where different HTML pages are connected through navigation links and JavaScript.
+The application follows a multi-page architecture where different HTML pages are connected through navigation links, JavaScript functions, and browser storage.
 
-**User Journey:**
+### User Journey
 
 1. Users enter the application through the Home Page.
 2. They explore restaurants and browse available menus.
 3. They can save favourite restaurants to their Wishlist.
-4. They can select a restaurant and explore its food menu.
+4. They select a restaurant and explore its food menu.
 5. They view individual food details and add dishes to the Cart.
-6. They review their selected items and proceed with checkout.
-7. They can view order confirmation and order tracking information.
-8. Users can also book restaurant tables through the Table Booking section.
+6. They review selected items and proceed with checkout.
+7. They receive an order confirmation.
+8. They can visit the Order Tracking page to view order progress.
+9. Users can also book restaurant tables through the Table Booking section.
 
-### Data Management
+### Page Navigation
 
-- `cart-common.js` provides reusable cart operations across multiple pages.
-- LocalStorage maintains cart, wishlist, selected restaurant, booking, and order information.
-- SessionStorage maintains login-related information.
-- JSON Server provides a REST API for user-related operations.
-- JavaScript dynamically updates page content based on stored information and user interactions.
+The application uses separate HTML pages for different functionalities:
+
+- `index.html` redirects users to `HTML/homepage.html`.
+- `homepage.html` serves as the main landing page.
+- `restaurants.html` displays available restaurants.
+- `menu.html` displays the selected restaurant's menu.
+- `fooddetails.html` displays food details and ordering options.
+- `Wishlist.html` displays saved restaurants.
+- `cart.html` manages selected food items.
+- `booking.html` handles restaurant table reservations.
+- `confirmation.html` displays confirmation information.
+- `tracking.html` displays order progress.
+- `login.html` and `registration.html` handle user authentication.
 
 ---
 
-## ⚙️ Installation & Setup
+## 💾 Data Management
+
+The project uses browser storage and JSON Server to manage application data.
+
+### 1. LocalStorage
+
+LocalStorage is used to maintain data even after the browser is refreshed or closed.
+
+The application uses LocalStorage for:
+
+| Storage Key | Purpose |
+|---|---|
+| `foodiehub_cart` | Stores cart items |
+| `foodiehub_wishlist` | Stores favourite restaurants |
+| `foodiehub_selected_restaurant` | Stores the selected restaurant |
+| `foodiehub_orders` | Stores placed orders |
+| `foodiehub_current_order_id` | Stores the current order ID |
+| `foodiehub_bookings` | Stores table booking information |
+
+### 2. SessionStorage
+
+SessionStorage maintains temporary session-related information.
+
+It is used for:
+- Storing logged-in user information.
+- Maintaining login sessions.
+- Managing logout functionality.
+- Handling navigation after login.
+- Maintaining temporary registration and checkout states.
+
+### 3. JSON Server
+
+JSON Server is used as a mock backend to provide REST API functionality.
+
+The `db.json` file stores user information and acts as the database for authentication-related operations.
+
+The application uses the Fetch API to communicate with the server.
+
+---
+
+## ⚙️ Installation and Setup
 
 Follow these steps to run FoodieHub on your local machine.
 
@@ -259,18 +310,18 @@ http://localhost:3000/users
 ### Step 5: Run the Frontend
 
 1. Open the cloned project in Visual Studio Code.
-2. Open the `HTML` folder.
-3. Right-click `homepage.html`.
+2. Open the project folder.
+3. Right-click `index.html`.
 4. Select **Open with Live Server**.
-5. The FoodieHub application will open in your browser.
+5. The application will redirect to the FoodieHub homepage.
 
 ---
 
 ## 💡 Key Concepts Implemented
 
-The project demonstrates the following web development and JavaScript concepts:
+The project demonstrates several important concepts of frontend development and JavaScript.
 
-### HTML & CSS
+### HTML5 and CSS3
 - Semantic HTML elements.
 - Forms and input elements.
 - Hyperlinks and relative file paths.
@@ -283,8 +334,7 @@ The project demonstrates the following web development and JavaScript concepts:
 - Variables, functions, and operators.
 - Arrays and objects.
 - DOM manipulation.
-- Event handling and event bubbling.
-- Event delegation.
+- Event handling and event delegation.
 - Arrow functions and callback functions.
 - Template literals.
 - Array methods:
@@ -301,10 +351,11 @@ The project demonstrates the following web development and JavaScript concepts:
 - Custom events.
 - Form validation.
 - Regular expressions.
-- Fetch API and asynchronous JavaScript.
+- Fetch API.
+- Asynchronous JavaScript.
 - Dynamic HTML rendering.
 
-### API & Data Management
+### API and Data Management
 - REST API fundamentals.
 - HTTP methods such as GET, POST, and DELETE.
 - JSON data handling.
@@ -334,9 +385,8 @@ The project demonstrates the following web development and JavaScript concepts:
 
 **Domain:** Web Development
 
-**Technologies:** HTML, CSS, JavaScript, JSON Server
+**Technologies:** HTML5, CSS3, JavaScript, JSON Server
 
 ---
 
 ⭐ If you find this project interesting, consider giving this repository a star!
-
